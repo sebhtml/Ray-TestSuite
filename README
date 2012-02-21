@@ -1,0 +1,5 @@
+Test suite for the Ray assembler.
+
+data-for-unit-tests is included.
+
+data-for-system-tests is too large to be included.

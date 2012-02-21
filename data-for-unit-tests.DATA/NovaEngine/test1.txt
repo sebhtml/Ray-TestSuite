@@ -1,0 +1,10 @@
+RayNovaEngine
+Choices: 2
+Choice: 1
+ DataPoints: 3
+ 1516 1 1442 1 1418 1
+Choice: 2
+ DataPoints: 4
+ 1547 1 1481 1 1419 1 1410 1
+Expected: IMPOSSIBLE_CHOICE
+

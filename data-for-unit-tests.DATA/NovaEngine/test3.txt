@@ -1,0 +1,45 @@
+RayNovaEngine
+Choices: 2
+Choice: 1
+DataPoints: 14
+10918 1 10918 1 10918 1 5775 1 5775 1 5845 1 794 1 776 1 778 1 2562 1 277 1  277 1 277 1 2496 1
+Choice: 2
+DataPoints: 9
+5624 1 5639 1 5534 1 5329 1 5103 1 800 1 761 1 338 1 2694 1
+Expected: 1
+
+RayNovaEngine
+Choices: 2
+Choice: 1
+DataPoints: 7
+5110 1 213 1 219 1 767 1 768 1 2328  1 2132 1
+Choice: 2
+DataPoints: 12
+139 1 139 1 777 1 780 1 772 1 774 1 742 1 2450 1 2430 1 2612 1 2612 1 2532 1
+Expected: 1
+
+RayNovaEngine
+Choices: 2
+Choice: 1
+DataPoints: 9
+5476 1 5581 1 123 1 57 1 123 1 57 1 2255 1 2609 1 2390 1
+Choice: 2
+DataPoints: 5
+10940 1 5508 1 5557 1 5233 1 2407 1
+Expected: 2
+
+RayNovaEngine
+Choices: 3
+	Choice: 1
+		DataPoints: 1
+			2189 1
+	Choice: 2
+		DataPoints: 26
+			10658 1 327 1 5356 1 327 1 327 1 327 1 5356 1 5356 1 327 1 327 1 443 1 5482 1 390 1 514 1 484 1 500 1 509 1 768 1
+			792 1 779 1 203 1 203 1 203 1 2296 1 2462 1 106 1
+	Choice: 3
+		DataPoints: 14
+			5961 1 5961 1 167 1 503 1 488 1 504 1 765 1 761 1 334 1 2671 1 276 1 2833 1
+			2388 1 2493 1
+
+Expected: 2

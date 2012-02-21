@@ -1,0 +1,15 @@
+RayNovaEngine
+Choices: 4
+	Choice: 1
+		DataPoints: 0
+	Choice: 2
+		DataPoints: 14
+		201 1 200 1 5180 1 214 1 218 1 215 1 212 1 209 1 232 1 215 1 229 1 205 1 208 1 212 1
+	Choice: 3
+		DataPoints: 1
+		10220 1
+	Choice: 4
+		DataPoints: 0
+
+Expected: 2
+

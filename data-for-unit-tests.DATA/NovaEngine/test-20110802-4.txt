@@ -1,0 +1,24 @@
+RayNovaEngine
+Choices: 2
+Choice: 1
+DataPoints: 8
+753 1
+766 1
+770 1
+778 1
+778 1
+5483 1
+10952 1
+10952 1
+
+Choice: 2
+DataPoints: 7
+84 1
+96 1
+762 1
+781 1
+2723 1
+5499 1
+5499 1
+
+Expected: 1
