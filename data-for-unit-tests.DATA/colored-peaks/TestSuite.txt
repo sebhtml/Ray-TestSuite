@@ -3,7 +3,7 @@ File: Salmonella_enterica_serovar_Paratyphi_A_ATCC_9150.tsv
 Peak: yes
 
 File: 2-2-subtilis.tsv
-Peak: no
+Peak: yes
 
 File: 2-1-bifido.-data
 Peak: yes
@@ -21,4 +21,7 @@ File: 2-2-spb7-0.UniquelyColoredAssembledDistribution.tsv
 Peak: no
 
 File: 2-2-LT2.tsv
+Peak: yes
+
+File: 2-2-9150.tsv
 Peak: yes
