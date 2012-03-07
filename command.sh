@@ -7,6 +7,6 @@ mpiexec -n 30 -output-filename TestX \
 -o TestX \
 -search DatabaseTest \
 -search DatabaseTest-genes \
--with-phylogeny \
+-with-taxonomy \
  Taxonomy/Genome-to-Taxon.tsv \
  Taxonomy/TreeOfLife-Edges.tsv Taxonomy/Taxon-Names.tsv

@@ -5,6 +5,6 @@ mpiexec -n 30 -output-filename TestX \
  -p _1.fasta _2.fasta \
 -o TestX \
 -search DatabaseTest \
--with-phylogeny \
- Taxonomy/Genome-to-Taxon.tsv.1 \
+-with-taxonomy \
+ Taxonomy/Genome-to-Taxon.tsv \
  Taxonomy/TreeOfLife-Edges.tsv Taxonomy/Taxon-Names.tsv
