@@ -1,5 +1,4 @@
-mpiexec -output-filename $TEST_NAME \
--np $NSLOTS $RAY_GIT_PATH/Ray  \
+mpiexe -n $NSLOTS $RAY_TEST_SUITE/system-tests/builds/build-vanilla/Ray  \
 -p 200xStreptococcus-pneumoniae-R6.fasta_fragments_1.fasta \
    200xStreptococcus-pneumoniae-R6.fasta_fragments_2.fasta \
 -o $TEST_NAME

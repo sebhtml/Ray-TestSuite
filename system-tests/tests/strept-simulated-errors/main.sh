@@ -1,5 +1,4 @@
-mpiexec -output-filename $TEST_NAME \
--np $NSLOTS $RAY_GIT_PATH/Ray  \
+mpiexec -n $NSLOTS $RAY_TEST_SUITE/system-tests/builds/build-vanilla/Ray  \
 -p strept_200_1.fastq \
    strept_200_2.fastq \
 -o $TEST_NAME

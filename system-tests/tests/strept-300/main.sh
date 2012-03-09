@@ -1,4 +1,4 @@
-mpiexec -tag-output -np $NSLOTS $RAY_GIT_PATH/Ray \
+mpiexec -n $NSLOTS $RAY_TEST_SUITE/system-tests/builds/build-vanilla/Ray \
 -p s_1.fasta \
    s_2.fasta \
 -o $TEST_NAME

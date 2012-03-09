@@ -1,5 +1,5 @@
-mpiexec -output-filename $TEST_NAME \
--n $NSLOTS $RAY_GIT_PATH/Ray \
+mpiexec \
+-n $NSLOTS  $RAY_TEST_SUITE/system-tests/builds/build-vanilla/Ray \
 -p MiSeq_Ecoli_MG1655_110527_R1.fastq \
    MiSeq_Ecoli_MG1655_110527_R2.fastq \
 -o $TEST_NAME -k 31

@@ -3,9 +3,9 @@
 TEST_NAME=$1
 testName=$TEST_NAME
 
-if [ -z $RAY_GIT_PATH ]
+if [ -z $RAY_PATH ]
 then
-	export RAY_GIT_PATH=~/git-clones/ray
+	export RAY_PATH=$RAY_TEST_SUITE/system-tests/builds/build-vanilla
 fi
 
 if [ -z $NSLOTS ]
@@ -22,7 +22,11 @@ expression3="s/__NSLOTS__/$NSLOTS/g"
 sed -i $expression3 $qsubFile
 
 # @ is the delimiter here.
-expression2="s@__RAY_GIT_PATH__@$RAY_GIT_PATH@g"
+expression2="s@__RAY_PATH__@$RAY_PATH@g"
 sed -i $expression2 $qsubFile
+
+expression2="s@__RAY_TEST_SUITE__@$RAY_TEST_SUITE@g"
+sed -i $expression2 $qsubFile
+
 qsubOut=qsub-out-$testName
 qsub $qsubFile 

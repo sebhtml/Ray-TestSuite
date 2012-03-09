@@ -1,4 +1,4 @@
-mpiexec -np $NSLOTS $RAY_GIT_PATH/system-tests/builds/build-compression/Ray \
+mpiexec -n $NSLOTS $RAY_TEST_SUITE/system-tests/builds/build-compression/Ray \
   -i strept-interleaved.fasta.bz2 \
 -o $TEST_NAME
 

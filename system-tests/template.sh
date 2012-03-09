@@ -14,14 +14,15 @@ module load compilers/gcc/4.4.2 mpi/openmpi/1.4.3_gcc
 
 # will be replaced upstream.
 TEST_NAME=__TEST_NAME__
-RAY_GIT_PATH=__RAY_GIT_PATH__
+RAY_PATH=__RAY_PATH__
+RAY_TEST_SUITE=__RAY_TEST_SUITE__
 
 echo ""
 echo "BEGIN $TEST_NAME $(date)"
 echo ""
 
-cd $RAY_GIT_PATH/system-tests/tests/$TEST_NAME
-export PATH=$PATH:$HOME/software/MUMmer3.22:$HOME/software/amos-2.0.8/build/bin:$RAY_GIT_PATH/scripts
+cd $RAY_TEST_SUITE/system-tests/tests/$TEST_NAME
+export PATH=$PATH:$HOME/software/MUMmer3.22:$HOME/software/amos-2.0.8/build/bin:$RAY_PATH/scripts:$RAY_TEST_SUITE/scripts
 
 echo "Changing current directory as it should be."
 
@@ -36,7 +37,7 @@ rm -rf $TEST_NAME
 
 # run the system test
 # actually, the system test can be executed on a standardd computer
-# by exporting the variables TEST_NAME, RAY_GIT_PATH and NSLOTS
+# by exporting the variables TEST_NAME, RAY_PATH and NSLOTS
 # and by then calling the said script.
 source ./main.sh
 

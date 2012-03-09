@@ -1,4 +1,4 @@
-mpiexec -np $NSLOTS  $RAY_GIT_PATH/Ray  \
+mpiexec -n $NSLOTS $RAY_TEST_SUITE/system-tests/builds/build-vanilla/Ray \
 -i strept-interleaved.fasta \
 -o $TEST_NAME
 

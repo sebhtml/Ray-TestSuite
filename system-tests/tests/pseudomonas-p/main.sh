@@ -1,4 +1,4 @@
-mpiexec -np $NSLOTS  $RAY_GIT_PATH/Ray  \
+mpiexec -n $NSLOTS $RAY_TEST_SUITE/system-tests/builds/build-vanilla/Ray  \
 -p Pseud,200b,2x50b,50X_1.fasta Pseud,200b,2x50b,50X_2.fasta \
 -o $TEST_NAME
 
