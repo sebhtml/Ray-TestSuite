@@ -3,6 +3,11 @@
 TEST_NAME=$1
 testName=$TEST_NAME
 
+if [ -z $RAY_TEST_SUITE ]
+then
+	source Variables.sh
+fi
+
 if [ -z $RAY_PATH ]
 then
 	export RAY_PATH=$RAY_TEST_SUITE/system-tests/builds/build-vanilla
