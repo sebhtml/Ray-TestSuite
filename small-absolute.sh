@@ -6,7 +6,7 @@ out=/home/boiseb01/JOE
 
 rm -rf $out
 
-mpiexec -n 28 -output-filename TestX \
+mpiexec -n $NSLOTS -output-filename TestX \
  ~/Ray \
  -p _1.fasta _2.fasta \
 -o $out 

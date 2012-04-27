@@ -1,6 +1,5 @@
 #!/bin/bash
 
-NSLOTS=30
 PATH=.:$PATH
 
 rm -rf TestX
