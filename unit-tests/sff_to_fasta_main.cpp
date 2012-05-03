@@ -1,5 +1,5 @@
-#include <assembler/Loader.h>
-#include <structures/Read.h>
+#include <plugin_SequencesLoader/Loader.h>
+#include <plugin_SequencesLoader/Read.h>
 #include <stdint.h>
 #include <iostream>
 using namespace std;
@@ -14,9 +14,11 @@ int main(int argc,char**argv){
 	loader.constructor("",false);
 	loader.load(file,false);
 	char read[4096];
+
 	for(uint64_t i=0;i<loader.size();i++){
 		loader.at(i)->getSeq(read,false,false);
 		cout<<">"<<i<<endl<<read<<endl;
 	}
+
 	return 0;
 }

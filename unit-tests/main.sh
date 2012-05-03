@@ -2,6 +2,11 @@
 # test framework
 # Sébastien Boisvert
 
+source ../scripts/load-modules.sh
+
+export CODE=../code
+
+
 
 function getHandle(){
 	head /dev/urandom|sha1sum|awk '{print $1}'

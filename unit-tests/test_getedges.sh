@@ -1,4 +1,3 @@
-. ../scripts/load-modules.sh
 
 mpicxx -g \
  ../RayPlatform/*/*.cpp \
