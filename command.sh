@@ -1,3 +1,5 @@
+#!/bin/bash
+
 rm -rf TestX
 
 mpiexec -n $NSLOTS -output-filename TestX \
