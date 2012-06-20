@@ -4,11 +4,14 @@
 #include <unit-tests/unitTest.h>
 #include <fstream>
 #include <iostream>
+#include <stdint.h>
+#include <application_core/constants.h>
+#include <stdlib.h>
 using namespace std;
 
 int main(int argc,char**argv){
 	string file=argv[1];
-	map<int,uint64_t> data;
+	map<CoverageDepth,LargeCount> data;
 	ifstream f(file.c_str());
 	while(!f.eof()){
 		int a=-1;

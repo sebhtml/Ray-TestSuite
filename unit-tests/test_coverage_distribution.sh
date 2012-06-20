@@ -1,4 +1,5 @@
-g++ coverage_main.cpp ../code/plugin_CoverageGatherer/CoverageDistribution.cpp -O3 -o CoverageExe -I ../code -I ..
+g++ coverage_main.cpp ../code/plugin_CoverageGatherer/CoverageDistribution.cpp -O3 -o CoverageExe -I ../code -I .. \
+-I ../RayPlatform
 
 for i in $(ls CoverageDistribution/*.expected)
 do
