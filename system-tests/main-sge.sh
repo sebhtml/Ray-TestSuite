@@ -48,7 +48,7 @@ do
 
 	for job in $(cat jobs)
 	do
-		qstat|grep $job >> jobs-not-finished
+		$qstat|grep $job >> jobs-not-finished
 	done
 	sleep 1
 done
