@@ -43,12 +43,16 @@ sum=0
 
 n50=0
 
+largest=0
 for item in data:
 	total+=item
 
-average=total/count
+	if item >= largest:
+		largest=item
 
+average=total/count
 print "Total= "+str(total)
+print "Largest= "+str(largest)
 print "Average= "+str(average)
 
 for item in data:
