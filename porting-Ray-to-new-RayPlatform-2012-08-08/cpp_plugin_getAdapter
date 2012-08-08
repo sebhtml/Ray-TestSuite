@@ -1,0 +1,11 @@
+
+for i in $(ls code|grep plugin_)
+do
+	plugin=$(echo $i|sed 's/plugin_//g')
+
+	source=code/$i/$plugin.cpp
+
+	expression="s/&m_adapter_/__GetAdapter($plugin,/g"
+
+	sed -i $expression  $source
+done

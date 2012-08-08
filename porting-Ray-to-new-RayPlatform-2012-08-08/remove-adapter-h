@@ -1,0 +1,8 @@
+
+for i in $( find code|grep .h$)
+do
+	cat $i|grep -v m_adapter_\
+>1
+	mv 1 $i
+
+done
