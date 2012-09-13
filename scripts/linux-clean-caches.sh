@@ -4,12 +4,10 @@
 # useful when running velvetg after velveth on a buggy Linux
 # distribution
 
-# sync everything, brings coherence
+# sync everything, otherwise Linux will not dirty objects
 sync
 
-cat /proc/sys/vm/drop_caches > defaultValue
-
 # To free pagecache, dentries and inodes:
-echo 3 > /proc/sys/vm/drop_caches
+echo 3 &> /proc/sys/vm/drop_caches
 
-cat defaultValue > /proc/sys/vm/drop_caches
+echo 0 &> /proc/sys/vm/drop_caches
