@@ -1,0 +1,784 @@
+#!/bin/bash
+#PBS -N Ray-African-5184-new-routing-algorithms-2012-09-29.1
+#PBS -o Ray-African-5184-new-routing-algorithms-2012-09-29.1.stdout
+#PBS -e Ray-African-5184-new-routing-algorithms-2012-09-29.1.stderr
+#PBS -q qtest@mp2
+#PBS -l nodes=216:ppn=24
+#PBS -l walltime=25:00:00
+#PBS -M sebastien.boisvert.3@ulaval.ca
+#PBS -m bea
+cd $PBS_O_WORKDIR
+
+# 72^2 is 5184 processes, 216 machines with 24 cores each. polytope has 5184 vertices and a degree of 142
+
+. /mnt/scratch_mp2/corbeil/corbeil_group/software/NGS-Pipelines/LoadModules.sh
+
+mpiexec -output-filename Ray-African-5184-new-routing-algorithms-2012-09-29.1 \
+-bynode \
+-n 5184 \
+Ray \
+-o Ray-African-5184-new-routing-algorithms-2012-09-29.1 \
+-k 21 \
+-route-messages -connection-type polytope -routing-graph-degree 142 \
+-p \
+    Sample/SRR002271_1.fastq.bz2 \
+    Sample/SRR002271_2.fastq.bz2 \
+-p \
+    Sample/SRR002272_1.fastq.bz2 \
+    Sample/SRR002272_2.fastq.bz2 \
+-p \
+    Sample/SRR002273_1.fastq.bz2 \
+    Sample/SRR002273_2.fastq.bz2 \
+-p \
+    Sample/SRR002274_1.fastq.bz2 \
+    Sample/SRR002274_2.fastq.bz2 \
+-p \
+    Sample/SRR002275_1.fastq.bz2 \
+    Sample/SRR002275_2.fastq.bz2 \
+-p \
+    Sample/SRR002276_1.fastq.bz2 \
+    Sample/SRR002276_2.fastq.bz2 \
+-p \
+    Sample/SRR002277_1.fastq.bz2 \
+    Sample/SRR002277_2.fastq.bz2 \
+-p \
+    Sample/SRR002278_1.fastq.bz2 \
+    Sample/SRR002278_2.fastq.bz2 \
+-p \
+    Sample/SRR002279_1.fastq.bz2 \
+    Sample/SRR002279_2.fastq.bz2 \
+-p \
+    Sample/SRR002280_1.fastq.bz2 \
+    Sample/SRR002280_2.fastq.bz2 \
+-p \
+    Sample/SRR002281_1.fastq.bz2 \
+    Sample/SRR002281_2.fastq.bz2 \
+-p \
+    Sample/SRR002282_1.fastq.bz2 \
+    Sample/SRR002282_2.fastq.bz2 \
+-p \
+    Sample/SRR002283_1.fastq.bz2 \
+    Sample/SRR002283_2.fastq.bz2 \
+-p \
+    Sample/SRR002284_1.fastq.bz2 \
+    Sample/SRR002284_2.fastq.bz2 \
+-p \
+    Sample/SRR002285_1.fastq.bz2 \
+    Sample/SRR002285_2.fastq.bz2 \
+-p \
+    Sample/SRR002286_1.fastq.bz2 \
+    Sample/SRR002286_2.fastq.bz2 \
+-p \
+    Sample/SRR002287_1.fastq.bz2 \
+    Sample/SRR002287_2.fastq.bz2 \
+-p \
+    Sample/SRR002288_1.fastq.bz2 \
+    Sample/SRR002288_2.fastq.bz2 \
+-p \
+    Sample/SRR002289_1.fastq.bz2 \
+    Sample/SRR002289_2.fastq.bz2 \
+-p \
+    Sample/SRR002290_1.fastq.bz2 \
+    Sample/SRR002290_2.fastq.bz2 \
+-p \
+    Sample/SRR002291_1.fastq.bz2 \
+    Sample/SRR002291_2.fastq.bz2 \
+-p \
+    Sample/SRR002292_1.fastq.bz2 \
+    Sample/SRR002292_2.fastq.bz2 \
+-p \
+    Sample/SRR002293_1.fastq.bz2 \
+    Sample/SRR002293_2.fastq.bz2 \
+-p \
+    Sample/SRR002294_1.fastq.bz2 \
+    Sample/SRR002294_2.fastq.bz2 \
+-p \
+    Sample/SRR002295_1.fastq.bz2 \
+    Sample/SRR002295_2.fastq.bz2 \
+-p \
+    Sample/SRR002296_1.fastq.bz2 \
+    Sample/SRR002296_2.fastq.bz2 \
+-p \
+    Sample/SRR002297_1.fastq.bz2 \
+    Sample/SRR002297_2.fastq.bz2 \
+-p \
+    Sample/SRR002298_1.fastq.bz2 \
+    Sample/SRR002298_2.fastq.bz2 \
+-p \
+    Sample/SRR002299_1.fastq.bz2 \
+    Sample/SRR002299_2.fastq.bz2 \
+-p \
+    Sample/SRR002300_1.fastq.bz2 \
+    Sample/SRR002300_2.fastq.bz2 \
+-p \
+    Sample/SRR002301_1.fastq.bz2 \
+    Sample/SRR002301_2.fastq.bz2 \
+-p \
+    Sample/SRR002302_1.fastq.bz2 \
+    Sample/SRR002302_2.fastq.bz2 \
+-p \
+    Sample/SRR002303_1.fastq.bz2 \
+    Sample/SRR002303_2.fastq.bz2 \
+-p \
+    Sample/SRR002304_1.fastq.bz2 \
+    Sample/SRR002304_2.fastq.bz2 \
+-p \
+    Sample/SRR002305_1.fastq.bz2 \
+    Sample/SRR002305_2.fastq.bz2 \
+-p \
+    Sample/SRR002306_1.fastq.bz2 \
+    Sample/SRR002306_2.fastq.bz2 \
+-p \
+    Sample/SRR002307_1.fastq.bz2 \
+    Sample/SRR002307_2.fastq.bz2 \
+-p \
+    Sample/SRR002308_1.fastq.bz2 \
+    Sample/SRR002308_2.fastq.bz2 \
+-p \
+    Sample/SRR002309_1.fastq.bz2 \
+    Sample/SRR002309_2.fastq.bz2 \
+-p \
+    Sample/SRR002310_1.fastq.bz2 \
+    Sample/SRR002310_2.fastq.bz2 \
+-p \
+    Sample/SRR002311_1.fastq.bz2 \
+    Sample/SRR002311_2.fastq.bz2 \
+-p \
+    Sample/SRR002312_1.fastq.bz2 \
+    Sample/SRR002312_2.fastq.bz2 \
+-p \
+    Sample/SRR002313_1.fastq.bz2 \
+    Sample/SRR002313_2.fastq.bz2 \
+-p \
+    Sample/SRR002314_1.fastq.bz2 \
+    Sample/SRR002314_2.fastq.bz2 \
+-p \
+    Sample/SRR002315_1.fastq.bz2 \
+    Sample/SRR002315_2.fastq.bz2 \
+-p \
+    Sample/SRR002316_1.fastq.bz2 \
+    Sample/SRR002316_2.fastq.bz2 \
+-p \
+    Sample/SRR002317_1.fastq.bz2 \
+    Sample/SRR002317_2.fastq.bz2 \
+-p \
+    Sample/SRR002318_1.fastq.bz2 \
+    Sample/SRR002318_2.fastq.bz2 \
+-p \
+    Sample/SRR002319_1.fastq.bz2 \
+    Sample/SRR002319_2.fastq.bz2 \
+-p \
+    Sample/SRR003810_1.fastq.bz2 \
+    Sample/SRR003810_2.fastq.bz2 \
+-p \
+    Sample/SRR003812_1.fastq.bz2 \
+    Sample/SRR003812_2.fastq.bz2 \
+-p \
+    Sample/SRR003813_1.fastq.bz2 \
+    Sample/SRR003813_2.fastq.bz2 \
+-p \
+    Sample/SRR003814_1.fastq.bz2 \
+    Sample/SRR003814_2.fastq.bz2 \
+-p \
+    Sample/SRR003815_1.fastq.bz2 \
+    Sample/SRR003815_2.fastq.bz2 \
+-p \
+    Sample/SRR003816_1.fastq.bz2 \
+    Sample/SRR003816_2.fastq.bz2 \
+-p \
+    Sample/SRR003817_1.fastq.bz2 \
+    Sample/SRR003817_2.fastq.bz2 \
+-p \
+    Sample/SRR003818_1.fastq.bz2 \
+    Sample/SRR003818_2.fastq.bz2 \
+-p \
+    Sample/SRR003819_1.fastq.bz2 \
+    Sample/SRR003819_2.fastq.bz2 \
+-p \
+    Sample/SRR003820_1.fastq.bz2 \
+    Sample/SRR003820_2.fastq.bz2 \
+-p \
+    Sample/SRR003821_1.fastq.bz2 \
+    Sample/SRR003821_2.fastq.bz2 \
+-p \
+    Sample/SRR003823_1.fastq.bz2 \
+    Sample/SRR003823_2.fastq.bz2 \
+-p \
+    Sample/SRR003824_1.fastq.bz2 \
+    Sample/SRR003824_2.fastq.bz2 \
+-p \
+    Sample/SRR003825_1.fastq.bz2 \
+    Sample/SRR003825_2.fastq.bz2 \
+-p \
+    Sample/SRR003837_1.fastq.bz2 \
+    Sample/SRR003837_2.fastq.bz2 \
+-p \
+    Sample/SRR003838_1.fastq.bz2 \
+    Sample/SRR003838_2.fastq.bz2 \
+-p \
+    Sample/SRR003839_1.fastq.bz2 \
+    Sample/SRR003839_2.fastq.bz2 \
+-p \
+    Sample/SRR003840_1.fastq.bz2 \
+    Sample/SRR003840_2.fastq.bz2 \
+-p \
+    Sample/SRR003841_1.fastq.bz2 \
+    Sample/SRR003841_2.fastq.bz2 \
+-p \
+    Sample/SRR003845_1.fastq.bz2 \
+    Sample/SRR003845_2.fastq.bz2 \
+-p \
+    Sample/SRR003846_1.fastq.bz2 \
+    Sample/SRR003846_2.fastq.bz2 \
+-p \
+    Sample/SRR003847_1.fastq.bz2 \
+    Sample/SRR003847_2.fastq.bz2 \
+-p \
+    Sample/SRR003848_1.fastq.bz2 \
+    Sample/SRR003848_2.fastq.bz2 \
+-p \
+    Sample/SRR003849_1.fastq.bz2 \
+    Sample/SRR003849_2.fastq.bz2 \
+-p \
+    Sample/SRR003850_1.fastq.bz2 \
+    Sample/SRR003850_2.fastq.bz2 \
+-p \
+    Sample/SRR003851_1.fastq.bz2 \
+    Sample/SRR003851_2.fastq.bz2 \
+-p \
+    Sample/SRR003852_1.fastq.bz2 \
+    Sample/SRR003852_2.fastq.bz2 \
+-p \
+    Sample/SRR003853_1.fastq.bz2 \
+    Sample/SRR003853_2.fastq.bz2 \
+-p \
+    Sample/SRR003854_1.fastq.bz2 \
+    Sample/SRR003854_2.fastq.bz2 \
+-p \
+    Sample/SRR003855_1.fastq.bz2 \
+    Sample/SRR003855_2.fastq.bz2 \
+-p \
+    Sample/SRR003856_1.fastq.bz2 \
+    Sample/SRR003856_2.fastq.bz2 \
+-p \
+    Sample/SRR003857_1.fastq.bz2 \
+    Sample/SRR003857_2.fastq.bz2 \
+-p \
+    Sample/SRR003859_1.fastq.bz2 \
+    Sample/SRR003859_2.fastq.bz2 \
+-p \
+    Sample/SRR003860_1.fastq.bz2 \
+    Sample/SRR003860_2.fastq.bz2 \
+-p \
+    Sample/SRR003861_1.fastq.bz2 \
+    Sample/SRR003861_2.fastq.bz2 \
+-p \
+    Sample/SRR003863_1.fastq.bz2 \
+    Sample/SRR003863_2.fastq.bz2 \
+-p \
+    Sample/SRR003864_1.fastq.bz2 \
+    Sample/SRR003864_2.fastq.bz2 \
+-p \
+    Sample/SRR003866_1.fastq.bz2 \
+    Sample/SRR003866_2.fastq.bz2 \
+-p \
+    Sample/SRR003867_1.fastq.bz2 \
+    Sample/SRR003867_2.fastq.bz2 \
+-p \
+    Sample/SRR003868_1.fastq.bz2 \
+    Sample/SRR003868_2.fastq.bz2 \
+-p \
+    Sample/SRR003869_1.fastq.bz2 \
+    Sample/SRR003869_2.fastq.bz2 \
+-p \
+    Sample/SRR003870_1.fastq.bz2 \
+    Sample/SRR003870_2.fastq.bz2 \
+-p \
+    Sample/SRR003871_1.fastq.bz2 \
+    Sample/SRR003871_2.fastq.bz2 \
+-p \
+    Sample/SRR003872_1.fastq.bz2 \
+    Sample/SRR003872_2.fastq.bz2 \
+-p \
+    Sample/SRR003873_1.fastq.bz2 \
+    Sample/SRR003873_2.fastq.bz2 \
+-p \
+    Sample/SRR003874_1.fastq.bz2 \
+    Sample/SRR003874_2.fastq.bz2 \
+-p \
+    Sample/SRR003875_1.fastq.bz2 \
+    Sample/SRR003875_2.fastq.bz2 \
+-p \
+    Sample/SRR003876_1.fastq.bz2 \
+    Sample/SRR003876_2.fastq.bz2 \
+-p \
+    Sample/SRR003877_1.fastq.bz2 \
+    Sample/SRR003877_2.fastq.bz2 \
+-p \
+    Sample/SRR003878_1.fastq.bz2 \
+    Sample/SRR003878_2.fastq.bz2 \
+-p \
+    Sample/SRR003879_1.fastq.bz2 \
+    Sample/SRR003879_2.fastq.bz2 \
+-p \
+    Sample/SRR003960_1.fastq.bz2 \
+    Sample/SRR003960_2.fastq.bz2 \
+-p \
+    Sample/SRR003961_1.fastq.bz2 \
+    Sample/SRR003961_2.fastq.bz2 \
+-p \
+    Sample/SRR003962_1.fastq.bz2 \
+    Sample/SRR003962_2.fastq.bz2 \
+-p \
+    Sample/SRR003963_1.fastq.bz2 \
+    Sample/SRR003963_2.fastq.bz2 \
+-p \
+    Sample/SRR003964_1.fastq.bz2 \
+    Sample/SRR003964_2.fastq.bz2 \
+-p \
+    Sample/SRR003965_1.fastq.bz2 \
+    Sample/SRR003965_2.fastq.bz2 \
+-p \
+    Sample/SRR003966_1.fastq.bz2 \
+    Sample/SRR003966_2.fastq.bz2 \
+-p \
+    Sample/SRR003967_1.fastq.bz2 \
+    Sample/SRR003967_2.fastq.bz2 \
+-p \
+    Sample/SRR003968_1.fastq.bz2 \
+    Sample/SRR003968_2.fastq.bz2 \
+-p \
+    Sample/SRR003969_1.fastq.bz2 \
+    Sample/SRR003969_2.fastq.bz2 \
+-p \
+    Sample/SRR003970_1.fastq.bz2 \
+    Sample/SRR003970_2.fastq.bz2 \
+-p \
+    Sample/SRR003971_1.fastq.bz2 \
+    Sample/SRR003971_2.fastq.bz2 \
+-p \
+    Sample/SRR004105_1.fastq.bz2 \
+    Sample/SRR004105_2.fastq.bz2 \
+-p \
+    Sample/SRR004106_1.fastq.bz2 \
+    Sample/SRR004106_2.fastq.bz2 \
+-p \
+    Sample/SRR004107_1.fastq.bz2 \
+    Sample/SRR004107_2.fastq.bz2 \
+-p \
+    Sample/SRR004108_1.fastq.bz2 \
+    Sample/SRR004108_2.fastq.bz2 \
+-p \
+    Sample/SRR004109_1.fastq.bz2 \
+    Sample/SRR004109_2.fastq.bz2 \
+-p \
+    Sample/SRR004110_1.fastq.bz2 \
+    Sample/SRR004110_2.fastq.bz2 \
+-p \
+    Sample/SRR004111_1.fastq.bz2 \
+    Sample/SRR004111_2.fastq.bz2 \
+-p \
+    Sample/SRR004112_1.fastq.bz2 \
+    Sample/SRR004112_2.fastq.bz2 \
+-p \
+    Sample/SRR004113_1.fastq.bz2 \
+    Sample/SRR004113_2.fastq.bz2 \
+-p \
+    Sample/SRR004114_1.fastq.bz2 \
+    Sample/SRR004114_2.fastq.bz2 \
+-p \
+    Sample/SRR004116_1.fastq.bz2 \
+    Sample/SRR004116_2.fastq.bz2 \
+-p \
+    Sample/SRR004117_1.fastq.bz2 \
+    Sample/SRR004117_2.fastq.bz2 \
+-p \
+    Sample/SRR004118_1.fastq.bz2 \
+    Sample/SRR004118_2.fastq.bz2 \
+-p \
+    Sample/SRR004119_1.fastq.bz2 \
+    Sample/SRR004119_2.fastq.bz2 \
+-p \
+    Sample/SRR004120_1.fastq.bz2 \
+    Sample/SRR004120_2.fastq.bz2 \
+-p \
+    Sample/SRR004121_1.fastq.bz2 \
+    Sample/SRR004121_2.fastq.bz2 \
+-p \
+    Sample/SRR004122_1.fastq.bz2 \
+    Sample/SRR004122_2.fastq.bz2 \
+-p \
+    Sample/SRR004123_1.fastq.bz2 \
+    Sample/SRR004123_2.fastq.bz2 \
+-p \
+    Sample/SRR004124_1.fastq.bz2 \
+    Sample/SRR004124_2.fastq.bz2 \
+-p \
+    Sample/SRR004125_1.fastq.bz2 \
+    Sample/SRR004125_2.fastq.bz2 \
+-p \
+    Sample/SRR004126_1.fastq.bz2 \
+    Sample/SRR004126_2.fastq.bz2 \
+-p \
+    Sample/SRR004127_1.fastq.bz2 \
+    Sample/SRR004127_2.fastq.bz2 \
+-p \
+    Sample/SRR004186_1.fastq.bz2 \
+    Sample/SRR004186_2.fastq.bz2 \
+-p \
+    Sample/SRR004187_1.fastq.bz2 \
+    Sample/SRR004187_2.fastq.bz2 \
+-p \
+    Sample/SRR004188_1.fastq.bz2 \
+    Sample/SRR004188_2.fastq.bz2 \
+-p \
+    Sample/SRR004190_1.fastq.bz2 \
+    Sample/SRR004190_2.fastq.bz2 \
+-p \
+    Sample/SRR004191_1.fastq.bz2 \
+    Sample/SRR004191_2.fastq.bz2 \
+-p \
+    Sample/SRR004192_1.fastq.bz2 \
+    Sample/SRR004192_2.fastq.bz2 \
+-p \
+    Sample/SRR004193_1.fastq.bz2 \
+    Sample/SRR004193_2.fastq.bz2 \
+-p \
+    Sample/SRR004194_1.fastq.bz2 \
+    Sample/SRR004194_2.fastq.bz2 \
+-p \
+    Sample/SRR004195_1.fastq.bz2 \
+    Sample/SRR004195_2.fastq.bz2 \
+-p \
+    Sample/SRR004197_1.fastq.bz2 \
+    Sample/SRR004197_2.fastq.bz2 \
+-p \
+    Sample/SRR004198_1.fastq.bz2 \
+    Sample/SRR004198_2.fastq.bz2 \
+-p \
+    Sample/SRR004199_1.fastq.bz2 \
+    Sample/SRR004199_2.fastq.bz2 \
+-p \
+    Sample/SRR004200_1.fastq.bz2 \
+    Sample/SRR004200_2.fastq.bz2 \
+-p \
+    Sample/SRR004201_1.fastq.bz2 \
+    Sample/SRR004201_2.fastq.bz2 \
+-p \
+    Sample/SRR004202_1.fastq.bz2 \
+    Sample/SRR004202_2.fastq.bz2 \
+-p \
+    Sample/SRR004203_1.fastq.bz2 \
+    Sample/SRR004203_2.fastq.bz2 \
+-p \
+    Sample/SRR004204_1.fastq.bz2 \
+    Sample/SRR004204_2.fastq.bz2 \
+-p \
+    Sample/SRR004205_1.fastq.bz2 \
+    Sample/SRR004205_2.fastq.bz2 \
+-p \
+    Sample/SRR004206_1.fastq.bz2 \
+    Sample/SRR004206_2.fastq.bz2 \
+-p \
+    Sample/SRR004207_1.fastq.bz2 \
+    Sample/SRR004207_2.fastq.bz2 \
+-p \
+    Sample/SRR004208_1.fastq.bz2 \
+    Sample/SRR004208_2.fastq.bz2 \
+-p \
+    Sample/SRR004209_1.fastq.bz2 \
+    Sample/SRR004209_2.fastq.bz2 \
+-p \
+    Sample/SRR004210_1.fastq.bz2 \
+    Sample/SRR004210_2.fastq.bz2 \
+-p \
+    Sample/SRR004211_1.fastq.bz2 \
+    Sample/SRR004211_2.fastq.bz2 \
+-p \
+    Sample/SRR004809_1.fastq.bz2 \
+    Sample/SRR004809_2.fastq.bz2 \
+-p \
+    Sample/SRR004810_1.fastq.bz2 \
+    Sample/SRR004810_2.fastq.bz2 \
+-p \
+    Sample/SRR004811_1.fastq.bz2 \
+    Sample/SRR004811_2.fastq.bz2 \
+-p \
+    Sample/SRR004812_1.fastq.bz2 \
+    Sample/SRR004812_2.fastq.bz2 \
+-p \
+    Sample/SRR004813_1.fastq.bz2 \
+    Sample/SRR004813_2.fastq.bz2 \
+-p \
+    Sample/SRR004814_1.fastq.bz2 \
+    Sample/SRR004814_2.fastq.bz2 \
+-p \
+    Sample/SRR004815_1.fastq.bz2 \
+    Sample/SRR004815_2.fastq.bz2 \
+-p \
+    Sample/SRR004816_1.fastq.bz2 \
+    Sample/SRR004816_2.fastq.bz2 \
+-p \
+    Sample/SRR004817_1.fastq.bz2 \
+    Sample/SRR004817_2.fastq.bz2 \
+-p \
+    Sample/SRR004818_1.fastq.bz2 \
+    Sample/SRR004818_2.fastq.bz2 \
+-p \
+    Sample/SRR004819_1.fastq.bz2 \
+    Sample/SRR004819_2.fastq.bz2 \
+-p \
+    Sample/SRR004820_1.fastq.bz2 \
+    Sample/SRR004820_2.fastq.bz2 \
+-p \
+    Sample/SRR004821_1.fastq.bz2 \
+    Sample/SRR004821_2.fastq.bz2 \
+-p \
+    Sample/SRR004822_1.fastq.bz2 \
+    Sample/SRR004822_2.fastq.bz2 \
+-p \
+    Sample/SRR004823_1.fastq.bz2 \
+    Sample/SRR004823_2.fastq.bz2 \
+-p \
+    Sample/SRR004824_1.fastq.bz2 \
+    Sample/SRR004824_2.fastq.bz2 \
+-p \
+    Sample/SRR004825_1.fastq.bz2 \
+    Sample/SRR004825_2.fastq.bz2 \
+-p \
+    Sample/SRR004826_1.fastq.bz2 \
+    Sample/SRR004826_2.fastq.bz2 \
+-p \
+    Sample/SRR004827_1.fastq.bz2 \
+    Sample/SRR004827_2.fastq.bz2 \
+-p \
+    Sample/SRR004828_1.fastq.bz2 \
+    Sample/SRR004828_2.fastq.bz2 \
+-p \
+    Sample/SRR004829_1.fastq.bz2 \
+    Sample/SRR004829_2.fastq.bz2 \
+-p \
+    Sample/SRR004830_1.fastq.bz2 \
+    Sample/SRR004830_2.fastq.bz2 \
+-p \
+    Sample/SRR004831_1.fastq.bz2 \
+    Sample/SRR004831_2.fastq.bz2 \
+-p \
+    Sample/SRR004832_1.fastq.bz2 \
+    Sample/SRR004832_2.fastq.bz2 \
+-p \
+    Sample/SRR004833_1.fastq.bz2 \
+    Sample/SRR004833_2.fastq.bz2 \
+-p \
+    Sample/SRR004834_1.fastq.bz2 \
+    Sample/SRR004834_2.fastq.bz2 \
+-p \
+    Sample/SRR004835_1.fastq.bz2 \
+    Sample/SRR004835_2.fastq.bz2 \
+-p \
+    Sample/SRR004836_1.fastq.bz2 \
+    Sample/SRR004836_2.fastq.bz2 \
+-p \
+    Sample/SRR004837_1.fastq.bz2 \
+    Sample/SRR004837_2.fastq.bz2 \
+-p \
+    Sample/SRR004838_1.fastq.bz2 \
+    Sample/SRR004838_2.fastq.bz2 \
+-p \
+    Sample/SRR004839_1.fastq.bz2 \
+    Sample/SRR004839_2.fastq.bz2 \
+-p \
+    Sample/SRR004840_1.fastq.bz2 \
+    Sample/SRR004840_2.fastq.bz2 \
+-p \
+    Sample/SRR004841_1.fastq.bz2 \
+    Sample/SRR004841_2.fastq.bz2 \
+-p \
+    Sample/SRR004842_1.fastq.bz2 \
+    Sample/SRR004842_2.fastq.bz2 \
+-p \
+    Sample/SRR004843_1.fastq.bz2 \
+    Sample/SRR004843_2.fastq.bz2 \
+-p \
+    Sample/SRR004844_1.fastq.bz2 \
+    Sample/SRR004844_2.fastq.bz2 \
+-p \
+    Sample/SRR004845_1.fastq.bz2 \
+    Sample/SRR004845_2.fastq.bz2 \
+-p \
+    Sample/SRR004846_1.fastq.bz2 \
+    Sample/SRR004846_2.fastq.bz2 \
+-p \
+    Sample/SRR004847_1.fastq.bz2 \
+    Sample/SRR004847_2.fastq.bz2 \
+-p \
+    Sample/SRR004848_1.fastq.bz2 \
+    Sample/SRR004848_2.fastq.bz2 \
+-p \
+    Sample/SRR004849_1.fastq.bz2 \
+    Sample/SRR004849_2.fastq.bz2 \
+-p \
+    Sample/SRR004850_1.fastq.bz2 \
+    Sample/SRR004850_2.fastq.bz2 \
+-p \
+    Sample/SRR004851_1.fastq.bz2 \
+    Sample/SRR004851_2.fastq.bz2 \
+-p \
+    Sample/SRR004852_1.fastq.bz2 \
+    Sample/SRR004852_2.fastq.bz2 \
+-p \
+    Sample/SRR004853_1.fastq.bz2 \
+    Sample/SRR004853_2.fastq.bz2 \
+-p \
+    Sample/SRR004854_1.fastq.bz2 \
+    Sample/SRR004854_2.fastq.bz2 \
+-p \
+    Sample/SRR004855_1.fastq.bz2 \
+    Sample/SRR004855_2.fastq.bz2 \
+-p \
+    Sample/SRR004856_1.fastq.bz2 \
+    Sample/SRR004856_2.fastq.bz2 \
+-p \
+    Sample/SRR004857_1.fastq.bz2 \
+    Sample/SRR004857_2.fastq.bz2 \
+-p \
+    Sample/SRR004858_1.fastq.bz2 \
+    Sample/SRR004858_2.fastq.bz2 \
+-p \
+    Sample/SRR004859_1.fastq.bz2 \
+    Sample/SRR004859_2.fastq.bz2 \
+-p \
+    Sample/SRR004860_1.fastq.bz2 \
+    Sample/SRR004860_2.fastq.bz2 \
+-p \
+    Sample/SRR004861_1.fastq.bz2 \
+    Sample/SRR004861_2.fastq.bz2 \
+-p \
+    Sample/SRR004862_1.fastq.bz2 \
+    Sample/SRR004862_2.fastq.bz2 \
+-p \
+    Sample/SRR004863_1.fastq.bz2 \
+    Sample/SRR004863_2.fastq.bz2 \
+-p \
+    Sample/SRR004864_1.fastq.bz2 \
+    Sample/SRR004864_2.fastq.bz2 \
+-p \
+    Sample/SRR004865_1.fastq.bz2 \
+    Sample/SRR004865_2.fastq.bz2 \
+-p \
+    Sample/SRR004866_1.fastq.bz2 \
+    Sample/SRR004866_2.fastq.bz2 \
+-p \
+    Sample/SRR004867_1.fastq.bz2 \
+    Sample/SRR004867_2.fastq.bz2 \
+-p \
+    Sample/SRR004868_1.fastq.bz2 \
+    Sample/SRR004868_2.fastq.bz2 \
+-p \
+    Sample/SRR004869_1.fastq.bz2 \
+    Sample/SRR004869_2.fastq.bz2 \
+-p \
+    Sample/SRR004870_1.fastq.bz2 \
+    Sample/SRR004870_2.fastq.bz2 \
+-p \
+    Sample/SRR004871_1.fastq.bz2 \
+    Sample/SRR004871_2.fastq.bz2 \
+-p \
+    Sample/SRR005657_1.fastq.bz2 \
+    Sample/SRR005657_2.fastq.bz2 \
+-p \
+    Sample/SRR005658_1.fastq.bz2 \
+    Sample/SRR005658_2.fastq.bz2 \
+-p \
+    Sample/SRR005659_1.fastq.bz2 \
+    Sample/SRR005659_2.fastq.bz2 \
+-p \
+    Sample/SRR005660_1.fastq.bz2 \
+    Sample/SRR005660_2.fastq.bz2 \
+-p \
+    Sample/SRR005661_1.fastq.bz2 \
+    Sample/SRR005661_2.fastq.bz2 \
+-p \
+    Sample/SRR005718_1.fastq.bz2 \
+    Sample/SRR005718_2.fastq.bz2 \
+-p \
+    Sample/SRR005719_1.fastq.bz2 \
+    Sample/SRR005719_2.fastq.bz2 \
+-p \
+    Sample/SRR005720_1.fastq.bz2 \
+    Sample/SRR005720_2.fastq.bz2 \
+-p \
+    Sample/SRR005721_1.fastq.bz2 \
+    Sample/SRR005721_2.fastq.bz2 \
+-p \
+    Sample/SRR005734_1.fastq.bz2 \
+    Sample/SRR005734_2.fastq.bz2 \
+-p \
+    Sample/SRR005735_1.fastq.bz2 \
+    Sample/SRR005735_2.fastq.bz2 \
+-p \
+    Sample/SRR006550_1.fastq.bz2 \
+    Sample/SRR006550_2.fastq.bz2 \
+-p \
+    Sample/SRR006551_1.fastq.bz2 \
+    Sample/SRR006551_2.fastq.bz2 \
+-p \
+    Sample/SRR006552_1.fastq.bz2 \
+    Sample/SRR006552_2.fastq.bz2 \
+-p \
+    Sample/SRR006553_1.fastq.bz2 \
+    Sample/SRR006553_2.fastq.bz2 \
+-p \
+    Sample/SRR006554_1.fastq.bz2 \
+    Sample/SRR006554_2.fastq.bz2 \
+-p \
+    Sample/SRR006555_1.fastq.bz2 \
+    Sample/SRR006555_2.fastq.bz2 \
+-p \
+    Sample/SRR006556_1.fastq.bz2 \
+    Sample/SRR006556_2.fastq.bz2 \
+-p \
+    Sample/SRR006557_1.fastq.bz2 \
+    Sample/SRR006557_2.fastq.bz2 \
+-p \
+    Sample/SRR006558_1.fastq.bz2 \
+    Sample/SRR006558_2.fastq.bz2 \
+-p \
+    Sample/SRR006559_1.fastq.bz2 \
+    Sample/SRR006559_2.fastq.bz2 \
+-p \
+    Sample/SRR006560_1.fastq.bz2 \
+    Sample/SRR006560_2.fastq.bz2 \
+-p \
+    Sample/SRR006561_1.fastq.bz2 \
+    Sample/SRR006561_2.fastq.bz2 \
+-p \
+    Sample/SRR006562_1.fastq.bz2 \
+    Sample/SRR006562_2.fastq.bz2 \
+-p \
+    Sample/SRR006563_1.fastq.bz2 \
+    Sample/SRR006563_2.fastq.bz2 \
+-p \
+    Sample/SRR006564_1.fastq.bz2 \
+    Sample/SRR006564_2.fastq.bz2 \
+-p \
+    Sample/SRR029278_1.fastq.bz2 \
+    Sample/SRR029278_2.fastq.bz2 \
+-p \
+    Sample/SRR029333_1.fastq.bz2 \
+    Sample/SRR029333_2.fastq.bz2 \
+-p \
+    Sample/SRR029334_1.fastq.bz2 \
+    Sample/SRR029334_2.fastq.bz2 \
+-p \
+    Sample/SRR029335_1.fastq.bz2 \
+    Sample/SRR029335_2.fastq.bz2 \
+-p \
+    Sample/SRR029336_1.fastq.bz2 \
+    Sample/SRR029336_2.fastq.bz2 \
+-p \
+    Sample/SRR029337_1.fastq.bz2 \
+    Sample/SRR029337_2.fastq.bz2 \
+-p \
+    Sample/SRR029338_1.fastq.bz2 \
+    Sample/SRR029338_2.fastq.bz2 &> Ray-African-5184-new-routing-algorithms-2012-09-29.1.OUT
