@@ -14,7 +14,7 @@ source Variables.sh
 suffix=$(date +%Y-%m-%d-%H-%M-%S)
 
 echo "$(date) Making fresh Ray builds"
-#./makeBuilds.sh
+./makeBuilds.sh
 
 echo -n "" > jobs
 
