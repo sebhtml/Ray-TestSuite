@@ -14,7 +14,7 @@ source Variables.sh
 suffix=$(date +%Y-%m-%d-%H-%M-%S)
 
 echo "$(date) Making fresh Ray builds"
-bash makeBuilds.sh
+#./makeBuilds.sh
 
 echo -n "" > jobs
 
@@ -28,8 +28,8 @@ do
 	echo "$(date) Preparing submission script for job $testName"
 	echo "$(date) Submitting job $testName to the compute grid"
 	qsubOut=$testName.qsub
-	./run-test-sge.sh $testName &> $qsubOut
-	jobId=$(cat $qsubOut|awk '{print $3}')
+	./run-test-on-super-computer.sh $testName &> $qsubOut
+	jobId=$(cat $qsubOut|tail -n1|awk '{print $1}')
 	echo $jobId >> jobs
 	echo "$(date) Job $testName has id $jobId"
 done 

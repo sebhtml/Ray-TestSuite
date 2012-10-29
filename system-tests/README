@@ -5,7 +5,7 @@ Where is your git clone. If not defined, the value is ~/git-clones/ray
 
 NSLOTS
 The number of compute cores to use per system test.
-If not defined, it is 64 when using Sun Grid Engine or
+If not defined, it is 32 when using Sun Grid Engine or
 the number of compute cores when using your computer (Symmetric MultiProcessing).
 
 # Running system tests
@@ -14,9 +14,9 @@ data-for-system-tests is a symbolic link.
 
 System tests are in the directory tests.
 
-Executing main-sge.sh submit all system tests to a compute grid.
+Executing main-on-super-computer.sh submit all system tests to a compute grid.
 
-Then, main-sge.sh waits for everything to complete before returning.
+Then, it waits for everything to complete before returning.
 
 
 Executing main-smp.sh runs system tests one after the other.
@@ -32,19 +32,22 @@ Each of them has a entry point called main.sh and symbolic links to data entries
 
 To run a single system test with Sun Grid Engine, use the command:
 
-./run-test-sge.sh phix
+./run-test-on-super-computer.sh phix
 
 
 To run a single system test directly on your computer, use the command
 
-./run-test-smp.sh phix
+./run-test-on-super-computer.sh phix
 
 
 To change the number of cores used, run this before:
 
 export NSLOTS=256
 
+A change to template.sh may also be required for Moab+Torque, but not for SGE.
+
 # builds
 
 Before running system tests, Ray builds are generated. They are deposited in builds.
+
 
