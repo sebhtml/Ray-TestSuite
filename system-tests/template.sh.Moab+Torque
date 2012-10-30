@@ -21,6 +21,10 @@ TEST_NAME=__TEST_NAME__
 RAY_PATH=__RAY_PATH__
 RAY_TEST_SUITE=__RAY_TEST_SUITE__
 
+#  NSLOTS is the number of processing cores 
+# Sun Grid Engine defines this, but Moab does not
+NSLOTS=__NSLOTS__
+
 echo ""
 echo "BEGIN $TEST_NAME $(date)"
 echo ""
@@ -40,7 +44,7 @@ echo ""
 rm -rf $TEST_NAME
 
 # run the system test
-# actually, the system test can be executed on a standardd computer
+# actually, the system test can be executed on a standard computer
 # by exporting the variables TEST_NAME, RAY_PATH and NSLOTS
 # and by then calling the said script.
 source ./main.sh
