@@ -1,0 +1,8 @@
+
+for i in $( find code|grep .cpp$)
+do
+	cat $i|grep -v 'setObject(this)'\
+>1
+	mv 1 $i
+
+done

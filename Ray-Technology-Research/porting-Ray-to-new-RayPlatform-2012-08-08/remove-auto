@@ -1,0 +1,10 @@
+
+for i in $(find code|grep .cpp$; find code|grep .h$)
+do
+	cat $i|\
+sed "s= generated_automatically ==g"\
+>1
+	
+	mv 1 $i
+
+done

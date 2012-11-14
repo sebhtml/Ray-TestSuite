@@ -1,0 +1,9 @@
+
+for i in $(ls $(find code|grep .cpp$; find code|grep .h$))
+do
+	sed -i 's/____CreateMessageTagAdapterImplementation/__CreateMessageTagAdapter/g' $i
+	sed -i 's/____CreateMasterModeAdapterImplementation/__CreateMasterModeAdapter/g' $i
+	sed -i 's/____CreateSlaveModeAdapterImplementation/__CreateSlaveModeAdapter/g' $i
+
+	##
+done

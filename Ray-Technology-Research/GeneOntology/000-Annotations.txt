@@ -1,0 +1,1 @@
+../genomes/EMBL_CDS+GO/000-Annotations.txt

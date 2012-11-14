@@ -1,0 +1,12 @@
+
+for i in $(ls $(find code|grep .cpp$; find code|grep .h$))
+do
+	cat $i|\
+grep -v '^ /* generated_automatically */$'|\
+grep -v ____CreateMasterModeAdapterDeclaration|\
+grep -v ____CreateSlaveModeAdapterDeclaration|\
+grep -v ____CreateMessageTagAdapterDeclaration > 1
+	
+	mv 1 $i
+
+done

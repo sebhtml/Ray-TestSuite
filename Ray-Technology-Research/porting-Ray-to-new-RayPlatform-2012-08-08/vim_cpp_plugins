@@ -1,0 +1,8 @@
+
+echo -n vim
+for i in $(ls code|grep plugin_)
+do
+	file=$(echo $i|sed 's/plugin_//g')
+
+	echo -n " code/$i/$file.cpp"
+done
