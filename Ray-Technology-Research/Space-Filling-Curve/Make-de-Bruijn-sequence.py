@@ -6,15 +6,15 @@ wordLength=6
 
 # \see http://www.ics.uci.edu/~eppstein/PADS/Lyndon.py
 def generateLyndonWords(alphabetSize,maximumLength):
-	words = [-1]
-	while words:
-		words[-1] += 1
-		yield words
-		m = len(words)
-		while len(words) < maximumLength:
-			words.append(words[-m])
-		while words and words[-1] == alphabetSize - 1:
-			words.pop()
+	word = [-1]
+	while word:
+		word[-1] += 1
+		yield word
+		m = len(word)
+		while len(word) < maximumLength:
+			word.append(word[-m])
+		while word and word[-1] == alphabetSize - 1:
+			word.pop()
 
 def getDeBruijnSequence(alphabetSize,wordLength):
 	output=[]
