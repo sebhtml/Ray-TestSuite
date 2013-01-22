@@ -1,6 +1,10 @@
 These are script to use Compute Canada on-demand instances.
 
+These can be used for batch processing or for interactive use.
+
+
 see https://rqchp.ca/?mod=cms&pageId=1380&lang=EN&
+
 
 Regular cluster instance
 
