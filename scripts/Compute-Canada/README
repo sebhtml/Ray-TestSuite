@@ -1,0 +1,7 @@
+These are script to use Compute Canada on-demand instances available 
+
+The 3 instance types are:
+
+* qfat256@mp2 (256 GiB memory, Lustre storage)
+* qfat512@mp2 (512 GiB memory, Lustre storage)
+* qwork@mp2  (24 cores, 32 GiB memory, Lustre storage)
