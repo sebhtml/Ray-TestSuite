@@ -2,7 +2,7 @@ These are script to use Compute Canada on-demand instances.
 
 see https://rqchp.ca/?mod=cms&pageId=1380&lang=EN&
 
-Regular cluster instances
+Regular cluster instance
 
 32 GiB memory
 2 x AMD Opteron(tm) Processor 6172 (24 cores)
