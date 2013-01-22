@@ -1,7 +1,49 @@
-These are script to use Compute Canada on-demand instances available 
+These are script to use Compute Canada on-demand instances.
 
-The 3 instance types are:
+see https://rqchp.ca/?mod=cms&pageId=1380&lang=EN&
 
-* qfat256@mp2 (256 GiB memory, Lustre storage)
-* qfat512@mp2 (512 GiB memory, Lustre storage)
-* qwork@mp2  (24 cores, 32 GiB memory, Lustre storage)
+Regular cluster instances
+
+32 GiB memory
+2 x AMD Opteron(tm) Processor 6172 (24 cores)
+504 GiB of instance storage
+64-bit platform
+I/O performance: Infiniband 7:2
+Lustre storage
+API name: qwork@mp2
+
+
+Fast cluster instance
+
+32 GiB memory
+2 x AMD Opteron(tm) Processor 6172 (24 cores)
+instance storage
+64-bit platform
+I/O performance: Infiniband 1:1
+Lustre storage
+API name: qfbb@mp2
+
+
+High memory cluster instance
+
+256 GiB memory
+AMD Opteron (48 cores)
+instance storage
+64-bit platform
+I/O performance: Infiniband 1:1
+Lustre storage
+API name: qfat256@mp2
+
+
+High memory cluster large instance
+
+qfat512@mp2
+
+512 GiB memory
+AMD Opteron (48 cores)
+instance storage
+64-bit platform
+I/O performance: Infiniband 1:1
+Lustre storage
+API name: qfat512@mp2
+
