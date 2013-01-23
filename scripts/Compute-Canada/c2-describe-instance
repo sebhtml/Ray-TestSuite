@@ -1,0 +1,11 @@
+#!/bin/bash
+
+if ! test $# = 1
+then
+	echo "usage"
+	echo "c2-describe-instance identifier"
+	exit
+fi
+
+job=$1
+checkjob $job|grep -A1 "Allocated Nodes"|tail -n1|sed 's/\[//g'|sed 's/:1\]//g'

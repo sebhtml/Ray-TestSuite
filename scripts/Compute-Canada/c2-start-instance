@@ -23,7 +23,4 @@ echo "sleep 98989898989"
 
 qsub $instance.sh &> $instance.sh.jobNumber
 
-sleep 2
-
-job=$(cat $instance.sh.jobNumber)
-checkjob $job|grep -A1 "Allocated Nodes"|tail -n1|sed 's/\[//g'|sed 's/:1\]//g'
+cat $instance.sh.jobNumber
