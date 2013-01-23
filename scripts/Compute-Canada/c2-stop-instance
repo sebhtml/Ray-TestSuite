@@ -1,0 +1,3 @@
+#!/bin/bash
+
+killall $(ps aux|grep 98989898989|awk '{print $2}')

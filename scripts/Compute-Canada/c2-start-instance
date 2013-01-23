@@ -1,0 +1,29 @@
+#!/bin/bash
+
+
+if ! test $# = 2
+then
+	echo "usage"
+	echo "c2-start-instance -t type"
+	echo "see README for type values"
+	exit
+fi
+
+type=$2
+instance=instance-$type-$(date +%Y-%m-%d-%H-%M-%S)
+
+(
+echo "#!/bin/bash"
+echo "#PBS -N $instance"
+echo "#PBS -q $type"
+echo "#PBS -l nodes=1:ppn=1"
+echo "#PBS -l walltime=1:00:00:00"
+echo "sleep 98989898989"
+) > $instance.sh
+
+qsub $instance.sh &> $instance.sh.jobNumber
+
+sleep 2
+
+job=$(cat $instance.sh.jobNumber)
+checkjob $job|grep -A1 "Allocated Nodes"|tail -n1|sed 's/\[//g'|sed 's/:1\]//g'
