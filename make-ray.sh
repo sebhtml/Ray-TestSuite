@@ -1,0 +1,7 @@
+#!/bin/bash
+
+FLAGS="HAVE_LIBZ=y HAVE_LIBBZ2=y ASSERT=y MAXKMERLENGTH=96"
+
+make clean $FLAGS
+make -j 10 $FLAGS
+
