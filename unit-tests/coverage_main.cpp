@@ -1,11 +1,11 @@
-#include <plugin_CoverageGatherer/CoverageDistribution.h>
+#include <code/plugin_CoverageGatherer/CoverageDistribution.h>
 #include <string>
 #include <map>
 #include <unit-tests/unitTest.h>
 #include <fstream>
 #include <iostream>
 #include <stdint.h>
-#include <application_core/constants.h>
+#include <code/plugin_Mock/constants.h>
 #include <stdlib.h>
 using namespace std;
 

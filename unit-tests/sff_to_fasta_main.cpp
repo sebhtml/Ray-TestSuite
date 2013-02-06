@@ -1,5 +1,5 @@
-#include <plugin_SequencesLoader/Loader.h>
-#include <plugin_SequencesLoader/Read.h>
+#include <code/plugin_SequencesLoader/Loader.h>
+#include <code/plugin_SequencesLoader/Read.h>
 #include <stdint.h>
 #include <iostream>
 using namespace std;
@@ -11,7 +11,7 @@ int main(int argc,char**argv){
 	}
 	string file=argv[1];
 	Loader loader;
-	loader.constructor("",false);
+	loader.constructor("",false,0);
 	loader.load(file,false);
 	char read[4096];
 

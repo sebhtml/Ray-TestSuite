@@ -1,5 +1,5 @@
 #include <unit-tests/unitTest.h>
-#include <application_core/common_functions.h>
+#include <code/plugin_Mock/common_functions.h>
 #include <stdint.h>
 #include <iostream>
 using namespace std;

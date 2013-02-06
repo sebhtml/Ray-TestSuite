@@ -1,11 +1,18 @@
-#include <application_core/common_functions.h>
 #include <unit-tests/unitTest.h>
-#include <plugin_KmerAcademyBuilder/Kmer.h>
+
+#include <code/plugin_Mock/common_functions.h>
+#include <code/plugin_KmerAcademyBuilder/Kmer.h>
+
 #include <map>
+#include <iostream>
+#include <vector>
 #include <stdlib.h>
 #include <time.h>
-#include <iostream>
 using namespace std;
+
+int computeAverage(vector<int>*a);
+void f2();
+void f1();
 
 int computeAverage(vector<int>*a){
 	uint64_t sum;
