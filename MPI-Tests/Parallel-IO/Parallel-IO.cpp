@@ -9,9 +9,9 @@
 #include <iostream>
 using namespace std;
 
-int main(int argc,char**argv){
+//#define USE_MPI_IO
 
-	cout<<"Starting main"<<endl;
+int main(int argc,char**argv){
 
 	MPI_Init(&argc,&argv);
 
@@ -21,7 +21,15 @@ int main(int argc,char**argv){
 	MPI_Comm_rank(MPI_COMM_WORLD,&rank);
 	MPI_Comm_size(MPI_COMM_WORLD,&size);
 
-	cout<<"I am rank "<<rank<<endl;
+	cout<<"I am rank "<<rank;
+
+#ifdef USE_MPI_IO
+	cout<<", will use MPI I/O"<<endl;
+#else
+	cout<<", will use POSIX I/O"<<endl;
+#endif
+
+	cout<<endl;
 
 	int tagValue=0;
 	int MESSAGE_TAG_WRITE_TO_FILE=tagValue++;
@@ -55,22 +63,50 @@ int main(int argc,char**argv){
 	MPI_Recv(NULL,0,MPI_INT,0,MESSAGE_TAG_WRITE_TO_FILE,MPI_COMM_WORLD,&status);
 
 	cout<<"Rank "<<rank<<" opens file"<<endl;
-	FILE*fp=fopen("data.dat","r+");
 
+	char fileName[]="data.dat";
+
+#ifdef USE_MPI_IO
+	MPI_File fp;
+
+// TODO: I am not sure what is the purpose of a MPI_Info object
+	MPI_File_open(MPI_COMM_WORLD,fileName,MPI_MODE_RDWR,MPI_INFO_NULL,&fp);
+	MPI_Offset offset=rank;
+	offset*=bytesPerRank;
+	int returnValue=MPI_File_seek(fp,offset,MPI_SEEK_SET);
+#else
+	FILE*fp=fopen(fileName,"r+");
 	uint64_t offset=rank;
 	offset*=bytesPerRank;
-
 	int returnValue=fseek(fp,offset,SEEK_SET);
-	returnValue++;
+#endif
+
+	if(returnValue!=0){
+		cout<<"Rank "<<rank<<" can not open the file."<<endl;
+	}
 
 	int bytes=0;
 
 	while(bytes<bytesPerRank){
-		fwrite(&rank,sizeof(int),1,fp);
+
+#ifdef USE_MPI_IO
+		MPI_Status writeStatus;
+		MPI_File_write(fp,&rank,sizeof(int),MPI_BYTE,&writeStatus);
+#else
+		int writtenElements=fwrite(&rank,sizeof(int),1,fp);
+
+		if(writtenElements!=1)
+			cout<<"Error: incorrect number of written bytes (expected: "<<1<<" actual: "<<writtenElements<<")"<<endl;
+#endif
+
 		bytes+=sizeof(int);
 	}
 
+#ifdef USE_MPI_IO
+	MPI_File_close(&fp);
+#else
 	fclose(fp);
+#endif
 
 	free(buffer);
 	buffer=NULL;
