@@ -1,5 +1,5 @@
 rm -rf joe
 
-mpiexec -n $NSLOTS -output-filename joe ~/Ray SRA001125.conf
+mpiexec -n $NSLOTS -output-filename joe ./Ray SRA001125.conf
 
 
