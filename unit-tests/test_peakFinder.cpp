@@ -1,4 +1,4 @@
-#include <plugin_Library/LibraryPeakFinder.h>
+#include <Library/LibraryPeakFinder.h>
 #include <unit-tests/unitTest.h>
 #include <fstream>
 #include <iostream>

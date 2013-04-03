@@ -1,4 +1,4 @@
-#include <plugin_Library/LibraryPeakFinder.h>
+#include <Library/LibraryPeakFinder.h>
 #include <fstream>
 #include <iostream>
 #include <vector>

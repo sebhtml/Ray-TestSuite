@@ -1,5 +1,5 @@
 #include <iostream>
-#include <plugin_Searcher/ColoredPeakFinder.h>
+#include <Searcher/ColoredPeakFinder.h>
 #include <fstream>
 #include <vector>
 #include <assert.h>

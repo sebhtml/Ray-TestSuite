@@ -1,6 +1,6 @@
-#include <plugin_Scaffolder/ScaffoldingAlgorithm.h>
-#include <plugin_Scaffolder/ScaffoldingVertex.h>
-#include <plugin_Scaffolder/ScaffoldingEdge.h>
+#include <Scaffolder/ScaffoldingAlgorithm.h>
+#include <Scaffolder/ScaffoldingVertex.h>
+#include <Scaffolder/ScaffoldingEdge.h>
 #include <string>
 #include <iostream>
 using namespace std;

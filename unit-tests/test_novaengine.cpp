@@ -1,4 +1,4 @@
-#include <plugin_SeedExtender/NovaEngine.h>
+#include <SeedExtender/NovaEngine.h>
 #include <map>
 #include <set>
 #include <vector>
