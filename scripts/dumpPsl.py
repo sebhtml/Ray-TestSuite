@@ -1,4 +1,4 @@
-#!/usr/bin/python
+#!/usr/bin/env python
 """Dump the content of the 'selfMap.psl' file
 
 Usage:
