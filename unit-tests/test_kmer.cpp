@@ -143,7 +143,7 @@ void test_out_large(){
 	Kmer aKmer=wordId(a.c_str());
 	Kmer bKmer=wordId(b.c_str());
 	
-	vector<Kmer>oEdges=aKmer._getOutgoingEdges(edges,wordSize);
+	vector<Kmer>oEdges=aKmer.getOutgoingEdges(edges,wordSize);
 	assertEquals(oEdges.size(),1);
 
 	Kmer actual=oEdges[0];
@@ -189,7 +189,7 @@ void test_Ingoing_large2(){
 
 	Kmer bKmer=wordId(b.c_str());
 	
-	vector<Kmer>inEdges=bKmer._getIngoingEdges(edges,wordSize);
+	vector<Kmer>inEdges=bKmer.getIngoingEdges(edges,wordSize);
 	Kmer actual=inEdges[0];
 	string actualStr=actual.idToWord(wordSize,false);
 	if(actualStr!=a){
@@ -234,7 +234,7 @@ void test_Ingoing_large(){
 	Kmer aKmer=wordId(a.c_str());
 	Kmer bKmer=wordId(b.c_str());
 	
-	vector<Kmer>inEdges=bKmer._getIngoingEdges(edges,wordSize);
+	vector<Kmer>inEdges=bKmer.getIngoingEdges(edges,wordSize);
 	Kmer actual=inEdges[0];
 	string actualStr=actual.idToWord(wordSize,false);
 	if(actualStr!=a){
@@ -275,7 +275,7 @@ void test_out(){
 	Kmer aKmer=wordId(a.c_str());
 	Kmer bKmer=wordId(b.c_str());
 	
-	vector<Kmer>oEdges=aKmer._getOutgoingEdges(edges,wordSize);
+	vector<Kmer>oEdges=aKmer.getOutgoingEdges(edges,wordSize);
 	assertEquals(oEdges.size(),1);
 
 	Kmer actual=oEdges[0];
@@ -319,7 +319,7 @@ void test_Ingoing(){
 	Kmer aKmer=wordId(a.c_str());
 	Kmer bKmer=wordId(b.c_str());
 	
-	vector<Kmer>inEdges=bKmer._getIngoingEdges(edges,wordSize);
+	vector<Kmer>inEdges=bKmer.getIngoingEdges(edges,wordSize);
 	Kmer actual=inEdges[0];
 	string actualStr=actual.idToWord(wordSize,false);
 	if(actualStr!=a){
@@ -372,7 +372,7 @@ int main(int argc,char**argv){
 	// ingoing edges.
 	//
 	uint8_t edges=0xff;
-	vector<Kmer>inEdges=id._getIngoingEdges(edges,wordSize);
+	vector<Kmer>inEdges=id.getIngoingEdges(edges,wordSize);
 	assertEquals(4,inEdges.size());
 	set<string> tmp;
 	for(int i=0;i<(int)inEdges.size();i++){
@@ -398,7 +398,7 @@ int main(int argc,char**argv){
 	assertEquals(tmp.size(),4);
 
 	// test outgoing edges
-	vector<Kmer> outEdges=id._getOutgoingEdges(edges,wordSize);
+	vector<Kmer> outEdges=id.getOutgoingEdges(edges,wordSize);
 	assertEquals(4,outEdges.size());
 	tmp.clear();
 	for(int i=0;i<(int)outEdges.size();i++){

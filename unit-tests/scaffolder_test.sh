@@ -1,8 +1,8 @@
 
 g++ scaffolder_test.cpp \
- ../code/plugin_Scaffolder/ScaffoldingVertex.cpp \
- ../code/plugin_Scaffolder/ScaffoldingEdge.cpp \
- ../code/plugin_Scaffolder/ScaffoldingAlgorithm.cpp \
+ ../code/Scaffolder/ScaffoldingVertex.cpp \
+ ../code/Scaffolder/ScaffoldingEdge.cpp \
+ ../code/Scaffolder/ScaffoldingAlgorithm.cpp \
  -O3 -o scaffolderTest -I ../code -I .. \
 -I ../RayPlatform \
 -Wall

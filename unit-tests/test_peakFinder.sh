@@ -1,6 +1,6 @@
-mpicxx  peakFinder.cpp ../code/plugin_Library/LibraryPeakFinder.cpp -I ../code/ -o peaks -I ../RayPlatform ../RayPlatform/core/statistics.cpp
+mpicxx  peakFinder.cpp ../code/Library/LibraryPeakFinder.cpp -I ../code/ -o peaks -I ../RayPlatform ../RayPlatform/core/statistics.cpp
 
-mpicxx  -g test_peakFinder.cpp ../code/plugin_Library/LibraryPeakFinder.cpp -I ../code/ -o test_peaks -I .. -I ../RayPlatform ../RayPlatform/core/statistics.cpp
+mpicxx  -g test_peakFinder.cpp ../code/Library/LibraryPeakFinder.cpp -I ../code/ -o test_peaks -I .. -I ../RayPlatform ../RayPlatform/core/statistics.cpp
 
 for i in $(ls Libraries/*.test)
 do
