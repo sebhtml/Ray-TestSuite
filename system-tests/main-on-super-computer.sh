@@ -79,13 +79,7 @@ do
 	cd ../..
 done &> ValidationErrors.txt
 
-for job in $(cat jobs)
-do
-	cat ~/$(ls ~|grep $job|grep "\.o") >> $outputFile
-done
-
 summarize-regressions.py $outputFile.validationEntries > $outputFile.html
 
 echo "$(date) summary of system tests: $outputFile.html"
-echo "$(date) logs are in $outputFile"
 echo "$(date) validation entries: $outputFile.validationEntries"

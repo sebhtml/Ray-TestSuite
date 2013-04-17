@@ -5,7 +5,8 @@
 #PBS -o __TEST_NAME__.stdout
 #PBS -e __TEST_NAME__.stderr
 # this is the project identifier
-#PBS -A nne-790-ab
+######PBS -A nne-790-ac
+#PBS -A fsi-440-ab
 # bound the execution  -- most system tests *will* finish under minutes
 #PBS -l walltime=16:00:00
 # utilize a number of compute cores in the compute grid -- also known as the mighty cloud
@@ -14,7 +15,8 @@
 cd "${PBS_O_WORKDIR}"
 
 # load modules
-module load compilers/gcc/4.4.2 mpi/openmpi/1.4.3_gcc
+
+source Modules.sh
 
 # will be replaced upstream.
 TEST_NAME=__TEST_NAME__

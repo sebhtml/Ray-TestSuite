@@ -10,7 +10,8 @@
 #$ -pe default __NSLOTS__
 
 # load modules
-module load compilers/gcc/4.4.2 mpi/openmpi/1.4.3_gcc
+
+source Modules.sh
 
 # will be replaced upstream.
 TEST_NAME=__TEST_NAME__

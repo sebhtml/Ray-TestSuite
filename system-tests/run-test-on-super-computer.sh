@@ -34,4 +34,6 @@ expression2="s@__RAY_TEST_SUITE__@$RAY_TEST_SUITE@g"
 sed -i $expression2 $qsubFile
 
 qsubOut=qsub-out-$testName
+
+rm -rf $testName.stderr $testName.stdout
 $qsub $qsubFile 
