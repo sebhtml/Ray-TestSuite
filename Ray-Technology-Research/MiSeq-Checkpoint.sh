@@ -2,7 +2,7 @@
 
 rm -rf TestX
 
-rm -rf save.ray/*Seeds*
+rm -rf save.ray/*Checkpoint.Seeds.ray
 #-write-kmers \
 
 mpiexec -n $NSLOTS \
