@@ -1,5 +1,7 @@
 rm -rf TestX
 
+rm -rf CHECK/*Checkpoint.Seeds.ray
+
 mpiexec -n $NSLOTS -output-filename TestX \
  ./Ray \
 -read-write-checkpoints CHECK \

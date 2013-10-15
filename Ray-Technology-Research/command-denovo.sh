@@ -1,5 +1,7 @@
 rm -rf TestX
 
+    #-show-communication-events \
+
 mpiexec -n $NSLOTS -output-filename TestX \
 ./Ray \
  -p 200xStreptococcus-pneumoniae-R6.fasta_fragments_1.fasta \

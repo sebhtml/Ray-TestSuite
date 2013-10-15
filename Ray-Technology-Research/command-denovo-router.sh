@@ -5,9 +5,9 @@ rm -rf TestX
 
 #-show-communication-events \
 
-mpiexec -n 27 -output-filename TestX \
+mpiexec -n 25 -output-filename TestX \
  ./Ray \
--route-messages -connection-type polytope -routing-graph-degree 6 \
+-route-messages \
  -p 200xStreptococcus-pneumoniae-R6.fasta_fragments_1.fasta \
     200xStreptococcus-pneumoniae-R6.fasta_fragments_2.fasta \
 -o TestX 
