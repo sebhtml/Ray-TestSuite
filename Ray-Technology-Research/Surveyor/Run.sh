@@ -8,6 +8,8 @@ rm -rf RaySurveyorResults
 
 processes=24
 
+rm RaySurveyorResults.*
+
 mpiexec -n $processes \
 	-output-filename RaySurveyorResults \
 ./Ray \
