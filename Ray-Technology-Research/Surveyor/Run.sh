@@ -6,7 +6,7 @@ rm -rf RaySurveyorResults
 
 #-show-communication-events \
 
-processes=28
+processes=24
 
 mpiexec -n $processes \
 	-output-filename RaySurveyorResults \

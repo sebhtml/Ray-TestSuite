@@ -6,15 +6,18 @@ rm -rf RaySurveyorResults
 
 #-show-communication-events \
 
-mpiexec -n 28 \
+processes=25
+
+mpiexec -n $processes \
 -output-filename RaySurveyorResults \
 ./Ray \
 -output RaySurveyorResults \
 -run-surveyor \
--read-sample-graph KID119442 ./Assembly_2013-10-07/Patients/KID119442-Ray-2013-10-07/kmers.txt \
+-read-sample-graph KID119442 kmers.txt.2000000 \
 
 exit
 
+-read-sample-graph KID119442 ./Assembly_2013-10-07/Patients/KID119442-Ray-2013-10-07/kmers.txt \
 -read-sample-graph KID120069 ./Assembly_2013-10-07/Patients/KID120069-Ray-2013-10-07/kmers.txt \
 -read-sample-graph KID119957 ./Assembly_2013-10-07/Patients/KID119957-Ray-2013-10-07/kmers.txt \
 -read-sample-graph KID120143 ./Assembly_2013-10-07/Environnement/KID120143-Ray-2013-10-07/kmers.txt \
