@@ -11,6 +11,7 @@ processes=25
 mpiexec -n $processes \
 -output-filename RaySurveyorResults \
 ./Ray \
+	-k 31 \
 -output RaySurveyorResults \
 -run-surveyor \
 -read-sample-graph KID119442 kmers.txt.2000000 \

@@ -13,6 +13,7 @@ rm RaySurveyorResults.*
 mpiexec -n $processes \
 	-output-filename RaySurveyorResults \
 ./Ray \
+-k 31 \
 -output RaySurveyorResults \
 -run-surveyor \
 -read-sample-graph ID033401 ./Assembly_2013-10-07/1996/ID033401-Ray-2013-10-07/kmers.txt \
