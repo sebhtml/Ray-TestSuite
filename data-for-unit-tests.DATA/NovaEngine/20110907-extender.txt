@@ -92,3 +92,5 @@ Choice: 2
 Choice: 3
 	DataPoints: 1
 		5607 1
+
+Expected: 1
