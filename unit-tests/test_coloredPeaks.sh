@@ -1,5 +1,8 @@
 
-mpicxx  -g test_coloredPeaks.cpp ../code/Searcher/ColoredPeakFinder.cpp -I ../code/ -o test_coloredPeaks -I .. -I ../RayPlatform ../RayPlatform/core/statistics.cpp
+mpicxx \
+code/SeedingData/PathHandle.cpp \
+code/SequencesLoader/ReadHandle.cpp \
+-g test_coloredPeaks.cpp code/Searcher/ColoredPeakFinder.cpp -I. -o test_coloredPeaks RayPlatform/core/statistics.cpp
 
 prog=$(pwd)/test_coloredPeaks
 

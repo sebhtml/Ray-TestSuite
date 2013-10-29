@@ -1,6 +1,7 @@
-#include<assert.h>
-#include<SequencesLoader.h>
-#include<stdlib.h>
+#include <code/SequencesLoader/SequencesLoader.h>
+
+#include <stdlib.h>
+#include <assert.h>
 
 int main(){
 	int a=90;

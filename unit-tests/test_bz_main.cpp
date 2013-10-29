@@ -20,9 +20,9 @@
 
 */
 
-#include<stdlib.h>
-#include<iostream>
-#include<BzReader.h>
+#include <stdlib.h>
+#include <iostream>
+#include <BzReader.h>
 using namespace std;
 
 int main(){

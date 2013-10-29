@@ -1,5 +1,7 @@
-#include <Library/LibraryPeakFinder.h>
+#include <code/Library/LibraryPeakFinder.h>
+
 #include <unit-tests/unitTest.h>
+
 #include <fstream>
 #include <iostream>
 #include <vector>

@@ -20,10 +20,12 @@
 
 */
 
-#include<stdlib.h>
-#include<iostream>
 #include<BzReader.h>
+
+#include<iostream>
 using namespace std;
+
+#include<stdlib.h>
 
 int main(){
 	BzReader reader;

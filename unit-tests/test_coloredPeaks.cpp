@@ -1,9 +1,11 @@
+#include <code/Searcher/ColoredPeakFinder.h>
+
 #include <iostream>
-#include <Searcher/ColoredPeakFinder.h>
 #include <fstream>
 #include <vector>
 #include <assert.h>
 using namespace std;
+
 #include <unit-tests/unitTest.h>
 
 void run_test(string file,string result){

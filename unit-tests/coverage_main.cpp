@@ -1,13 +1,16 @@
 #include <code/CoverageGatherer/CoverageDistribution.h>
+#include <code/Mock/constants.h>
+
+#include <unit-tests/unitTest.h>
+
 #include <string>
 #include <map>
-#include <unit-tests/unitTest.h>
 #include <fstream>
 #include <iostream>
-#include <stdint.h>
-#include <code/Mock/constants.h>
-#include <stdlib.h>
 using namespace std;
+
+#include <stdint.h>
+#include <stdlib.h>
 
 int main(int argc,char**argv){
 	string file=argv[1];

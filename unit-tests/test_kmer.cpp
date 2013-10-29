@@ -1,15 +1,20 @@
 
-#include <VerticesExtractor/Vertex.h>
-#include <unit-tests/unitTest.h>
-#include <KmerAcademyBuilder/Kmer.h>
-#include <Mock/constants.h>
-#include <set>
+#include <code/VerticesExtractor/Vertex.h>
+#include <code/Mock/constants.h>
+#include <code/KmerAcademyBuilder/Kmer.h>
 #include <code/Mock/common_functions.h>
+
+#include <unit-tests/unitTest.h>
+
+#include <set>
 #include <vector>
-#include <assert.h>
 #include <string>
 #include <iostream>
 using namespace std;
+
+#include <assert.h>
+
+#define MAXKMERLENGTH CONFIG_MAXKMERLENGTH
 
 void test_addInEdge(){
 	string a="AGCAAGTTAGCAACATCATATGAGTGCAATCCTGTTGTAGGCTCATCTAAGACATAAATAGTT";
@@ -21,7 +26,7 @@ void test_addInEdge(){
 
 	Vertex bVertex;
 	bVertex.constructor();
-	bVertex.m_lowerKey=bKmer;
+	bVertex.setKey(bKmer);
 	bVertex.addIngoingEdge(&bKmer,&aKmer,wordSize);
 	
 	vector<Kmer>inEdges=bVertex.getIngoingEdges(&bKmer,wordSize);
@@ -60,7 +65,7 @@ void test_addOutEdge(){
 	if(aRC<lower){
 		lower=aRC;
 	}
-	aVertex.m_lowerKey=lower;
+	aVertex.setKey(lower);
 	aVertex.addOutgoingEdge(&aKmer,&bKmer,wordSize);
 	
 	vector<Kmer>Edges=aVertex.getOutgoingEdges(&aKmer,wordSize);
@@ -103,7 +108,7 @@ void test_addInEdge2(){
 	if(bRC<lower){
 		lower=bRC;
 	}
-	bVertex.m_lowerKey=lower;
+	bVertex.setKey(lower);
 	bVertex.addIngoingEdge(&bKmer,&aKmer,wordSize);
 	
 	vector<Kmer>inEdges=bVertex.getIngoingEdges(&bKmer,wordSize);

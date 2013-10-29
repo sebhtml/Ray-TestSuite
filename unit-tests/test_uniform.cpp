@@ -1,7 +1,8 @@
-#include <unit-tests/unitTest.h>
 
 #include <code/Mock/common_functions.h>
 #include <code/KmerAcademyBuilder/Kmer.h>
+
+#include <unit-tests/unitTest.h>
 
 #include <map>
 #include <iostream>
@@ -9,6 +10,8 @@
 #include <stdlib.h>
 #include <time.h>
 using namespace std;
+
+#include <assert.h>
 
 int computeAverage(vector<int>*a);
 void f2();

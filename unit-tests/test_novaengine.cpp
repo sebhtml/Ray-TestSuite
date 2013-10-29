@@ -1,12 +1,15 @@
-#include <SeedExtender/NovaEngine.h>
+#include <code/SeedExtender/NovaEngine.h>
+
+#include <unit-tests/unitTest.h>
+
 #include <map>
 #include <set>
 #include <vector>
 #include <iostream>
-#include <unit-tests/unitTest.h>
-#include <assert.h>
 #include <fstream>
 using namespace std;
+
+#include <assert.h>
 
 /*
  * example

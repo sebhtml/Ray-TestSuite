@@ -1,5 +1,7 @@
+
+#include <RayPlatform/routing/ConnectionGraph.h>
+
 #include <stdlib.h>
-#include <routing/ConnectionGraph.h>
 
 int main(int argc,char**argv){
 

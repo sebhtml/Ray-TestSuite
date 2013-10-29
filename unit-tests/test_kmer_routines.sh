@@ -2,10 +2,12 @@ function buildRay(){
 	
 	MAXKMERLENGTH=$1
 
-	mpicxx ../code/SeedExtender/Direction.cpp ../code/SequencesIndexer/ReadAnnotation.cpp \
-../code/SeedingData/GraphPath.cpp \
-../RayPlatform/*/*.cpp  ../code/VerticesExtractor/Vertex.cpp test_kmer.cpp  ../code/Mock/common_functions.cpp  \
-../code/KmerAcademyBuilder/Kmer.cpp -I$CODE -I. -D MAXKMERLENGTH=$MAXKMERLENGTH -DASSERT -I../code -I .. -I ../RayPlatform
+mpicxx code/SeedExtender/Direction.cpp code/SequencesIndexer/ReadAnnotation.cpp \
+code/SeedingData/PathHandle.cpp \
+code/SequencesLoader/ReadHandle.cpp \
+code/SeedingData/GraphPath.cpp \
+RayPlatform/*/*.cpp  code/VerticesExtractor/Vertex.cpp test_kmer.cpp  code/Mock/common_functions.cpp  \
+code/KmerAcademyBuilder/Kmer.cpp  -I. -D CONFIG_MAXKMERLENGTH=$MAXKMERLENGTH -DCONFIG_ASSERT 
 
 }
 

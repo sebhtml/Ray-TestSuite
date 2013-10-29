@@ -1,9 +1,10 @@
 #include<string>
-#include<string.h>
 #include<fstream>
 #include<sstream>
 #include<iostream>
 using namespace std;
+
+#include<string.h>
 
 void map(const string*ref,const char*read,const char*name,int ii){
 	int bestScore=-1;

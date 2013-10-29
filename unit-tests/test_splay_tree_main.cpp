@@ -21,10 +21,11 @@
 
 #define ASSERT
 
-#include<SplayTree.h>
-#include<SplayTreeIterator.h>
-#include<stdlib.h>
-#include<assert.h>
+#include <RayPlatform/structures/SplayTree.h>
+#include <RayPlatform/structures/SplayTreeIterator.h>
+
+#include <stdlib.h>
+#include <assert.h>
 
 void test_remove(){
 	MyAllocator allocator;

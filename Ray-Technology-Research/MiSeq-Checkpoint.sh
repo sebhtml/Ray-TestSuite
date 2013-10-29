@@ -10,6 +10,7 @@ mpiexec -n $NSLOTS \
 	-output-filename TestX \
 ./Ray -k 31 \
 -read-write-checkpoints save.ray \
+-debug \
 -write-seeds \
 -p \
 MiSeq_Ecoli_MG1655_110527_R1.fastq \

@@ -1,17 +1,20 @@
+
+#include <map>
+#include <vector>
+#include <string>
+#include <iostream>
+#include <string>
+using namespace std;
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <sys/types.h>
 #include <sys/stat.h>
 #include <stdint.h>
 #include <unistd.h>
-#include <string>
 #include <fcntl.h>
-#include <map>
-#include <vector>
 #include <sys/mman.h> 
-#include <string>
-#include <iostream>
-using namespace std;
+
 
 int main(){
 	string fileName="test.bin";

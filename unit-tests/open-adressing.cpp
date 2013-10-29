@@ -1,9 +1,11 @@
+
+#include <iostream>
+using namespace std;
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <stdint.h>
 #include <assert.h>
-#include <iostream>
-using namespace std;
 
 /**
  * make sure that double hashing can probe all the M buckets in M probing events

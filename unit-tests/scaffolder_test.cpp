@@ -1,6 +1,8 @@
-#include <Scaffolder/ScaffoldingAlgorithm.h>
-#include <Scaffolder/ScaffoldingVertex.h>
-#include <Scaffolder/ScaffoldingEdge.h>
+
+#include <code/Scaffolder/ScaffoldingAlgorithm.h>
+#include <code/Scaffolder/ScaffoldingVertex.h>
+#include <code/Scaffolder/ScaffoldingEdge.h>
+
 #include <string>
 #include <iostream>
 using namespace std;
@@ -42,7 +44,7 @@ int main(int argc,char**argv){
 	f2.close();
 	}
 
-	map<uint64_t,int> lengths;
+	map<PathHandle,int> lengths;
 
 	for(int i=0;i<(int)vertices.size();i++){
 		lengths[vertices[i].getName()]=vertices[i].getLength();
@@ -74,7 +76,7 @@ int main(int argc,char**argv){
 	solver.setVertices(&vertices);
 	solver.setEdges(&edges);
 
-	vector<vector<uint64_t> > m_scaffoldContigs;
+	vector<vector<PathHandle> > m_scaffoldContigs;
 	vector<vector<char> >m_scaffoldStrands;
 	vector<vector<int> >m_scaffoldGaps;
 

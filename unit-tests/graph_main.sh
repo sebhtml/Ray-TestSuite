@@ -1,16 +1,18 @@
 
-g++ -I ../RayPlatform -Wall \
+g++ -I . -Wall \
  -g \
 graph_main.cpp \
-../RayPlatform/routing/ConnectionGraph.cpp \
-../RayPlatform/core/statistics.cpp \
-../RayPlatform/routing/GraphImplementation.cpp \
-../RayPlatform/routing/GraphImplementationGroup.cpp \
-../RayPlatform/routing/GraphImplementationRandom.cpp \
-../RayPlatform/routing/GraphImplementationDeBruijn.cpp \
-../RayPlatform/routing/GraphImplementationKautz.cpp \
-../RayPlatform/routing/GraphImplementationExperimental.cpp \
-../RayPlatform/routing/GraphImplementationComplete.cpp \
+code/SeedingData/PathHandle.cpp \
+code/SequencesLoader/ReadHandle.cpp \
+RayPlatform/routing/ConnectionGraph.cpp \
+RayPlatform/core/statistics.cpp \
+RayPlatform/routing/GraphImplementation.cpp \
+RayPlatform/routing/GraphImplementationGroup.cpp \
+RayPlatform/routing/GraphImplementationRandom.cpp \
+RayPlatform/routing/GraphImplementationDeBruijn.cpp \
+RayPlatform/routing/GraphImplementationKautz.cpp \
+RayPlatform/routing/GraphImplementationExperimental.cpp \
+RayPlatform/routing/GraphImplementationComplete.cpp \
 -o graph_main
 
 echo "Done compiling !"

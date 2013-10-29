@@ -1,5 +1,7 @@
-g++ coverage_main.cpp ../code/CoverageGatherer/CoverageDistribution.cpp -O3 -o CoverageExe -I ../code -I .. \
--I ../RayPlatform
+g++ \
+code/SeedingData/PathHandle.cpp \
+code/SequencesLoader/ReadHandle.cpp \
+coverage_main.cpp code/CoverageGatherer/CoverageDistribution.cpp -O3 -o CoverageExe -I . 
 
 for i in $(ls CoverageDistribution/*.expected)
 do
