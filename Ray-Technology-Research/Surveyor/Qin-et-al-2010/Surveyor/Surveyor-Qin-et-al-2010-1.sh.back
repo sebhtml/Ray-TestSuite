@@ -1,0 +1,143 @@
+#PBS -S /bin/bash
+#PBS -N Surveyor-Qin-et-al-2010-1
+#PBS -o Surveyor-Qin-et-al-2010-1.stdout
+#PBS -e Surveyor-Qin-et-al-2010-1.stderr
+#PBS -A nne-790-ac
+#PBS -l walltime=02:00:00:00
+#PBS -l nodes=32:ppn=8
+
+cd $PBS_O_WORKDIR
+
+module use /rap/nne-790-ab/modulefiles
+module load nne-790-ab/apps/ray/devel-daa3832c2ec27467fb95760aed379e4b70c98c48
+
+mpiexec -n 256 \
+Ray \
+-k 31 \
+-output Surveyor-Qin-et-al-2010-1 \
+-run-surveyor \
+-read-sample-graph ERS006489 ../RayGraph-ERS006489-100/kmers.txt \
+-read-sample-graph ERS006500 ../RayGraph-ERS006500-100/kmers.txt \
+-read-sample-graph ERS006519 ../RayGraph-ERS006519-100/kmers.txt \
+-read-sample-graph ERS006520 ../RayGraph-ERS006520-100/kmers.txt \
+-read-sample-graph ERS006571 ../RayGraph-ERS006571-100/kmers.txt \
+-read-sample-graph ERS006585 ../RayGraph-ERS006585-100/kmers.txt \
+-read-sample-graph ERS006536 ../RayGraph-ERS006536-100/kmers.txt \
+-read-sample-graph ERS006540 ../RayGraph-ERS006540-100/kmers.txt \
+-read-sample-graph ERS006544 ../RayGraph-ERS006544-100/kmers.txt \
+-read-sample-graph ERS006547 ../RayGraph-ERS006547-100/kmers.txt \
+-read-sample-graph ERS006562 ../RayGraph-ERS006562-100/kmers.txt \
+-read-sample-graph ERS006599 ../RayGraph-ERS006599-100/kmers.txt \
+-read-sample-graph ERS006600 ../RayGraph-ERS006600-100/kmers.txt \
+-read-sample-graph ERS006604 ../RayGraph-ERS006604-100/kmers.txt \
+-read-sample-graph ERS006493 ../RayGraph-ERS006493-100/kmers.txt \
+-read-sample-graph ERS006507 ../RayGraph-ERS006507-100/kmers.txt \
+-read-sample-graph ERS006516 ../RayGraph-ERS006516-100/kmers.txt \
+-read-sample-graph ERS006522 ../RayGraph-ERS006522-100/kmers.txt \
+-read-sample-graph ERS006555 ../RayGraph-ERS006555-100/kmers.txt \
+-read-sample-graph ERS006557 ../RayGraph-ERS006557-100/kmers.txt \
+-read-sample-graph ERS006588 ../RayGraph-ERS006588-100/kmers.txt \
+-read-sample-graph ERS006491 ../RayGraph-ERS006491-100/kmers.txt \
+-read-sample-graph ERS006496 ../RayGraph-ERS006496-100/kmers.txt \
+-read-sample-graph ERS006512 ../RayGraph-ERS006512-100/kmers.txt \
+-read-sample-graph ERS006531 ../RayGraph-ERS006531-100/kmers.txt \
+-read-sample-graph ERS006545 ../RayGraph-ERS006545-100/kmers.txt \
+-read-sample-graph ERS006556 ../RayGraph-ERS006556-100/kmers.txt \
+-read-sample-graph ERS006505 ../RayGraph-ERS006505-100/kmers.txt \
+-read-sample-graph ERS006506 ../RayGraph-ERS006506-100/kmers.txt \
+-read-sample-graph ERS006508 ../RayGraph-ERS006508-100/kmers.txt \
+-read-sample-graph ERS006510 ../RayGraph-ERS006510-100/kmers.txt \
+-read-sample-graph ERS006525 ../RayGraph-ERS006525-100/kmers.txt \
+-read-sample-graph ERS006566 ../RayGraph-ERS006566-100/kmers.txt \
+-read-sample-graph ERS006575 ../RayGraph-ERS006575-100/kmers.txt \
+-read-sample-graph ERS006578 ../RayGraph-ERS006578-100/kmers.txt \
+-read-sample-graph ERS006579 ../RayGraph-ERS006579-100/kmers.txt \
+-read-sample-graph ERS006593 ../RayGraph-ERS006593-100/kmers.txt \
+-read-sample-graph ERS006487 ../RayGraph-ERS006487-100/kmers.txt \
+-read-sample-graph ERS006490 ../RayGraph-ERS006490-100/kmers.txt \
+-read-sample-graph ERS006549 ../RayGraph-ERS006549-100/kmers.txt \
+-read-sample-graph ERS006569 ../RayGraph-ERS006569-100/kmers.txt \
+-read-sample-graph ERS006583 ../RayGraph-ERS006583-100/kmers.txt \
+-read-sample-graph ERS006486 ../RayGraph-ERS006486-100/kmers.txt \
+-read-sample-graph ERS006502 ../RayGraph-ERS006502-100/kmers.txt \
+-read-sample-graph ERS006514 ../RayGraph-ERS006514-100/kmers.txt \
+-read-sample-graph ERS006518 ../RayGraph-ERS006518-100/kmers.txt \
+-read-sample-graph ERS006543 ../RayGraph-ERS006543-100/kmers.txt \
+-read-sample-graph ERS006552 ../RayGraph-ERS006552-100/kmers.txt \
+-read-sample-graph ERS006561 ../RayGraph-ERS006561-100/kmers.txt \
+-read-sample-graph ERS006567 ../RayGraph-ERS006567-100/kmers.txt \
+-read-sample-graph ERS006576 ../RayGraph-ERS006576-100/kmers.txt \
+-read-sample-graph ERS006577 ../RayGraph-ERS006577-100/kmers.txt \
+-read-sample-graph ERS006601 ../RayGraph-ERS006601-100/kmers.txt \
+-read-sample-graph ERS006602 ../RayGraph-ERS006602-100/kmers.txt \
+-read-sample-graph ERS006603 ../RayGraph-ERS006603-100/kmers.txt \
+-read-sample-graph ERS006607 ../RayGraph-ERS006607-100/kmers.txt \
+-read-sample-graph ERS006523 ../RayGraph-ERS006523-100/kmers.txt \
+-read-sample-graph ERS006526 ../RayGraph-ERS006526-100/kmers.txt \
+-read-sample-graph ERS006538 ../RayGraph-ERS006538-100/kmers.txt \
+-read-sample-graph ERS006541 ../RayGraph-ERS006541-100/kmers.txt \
+-read-sample-graph ERS006550 ../RayGraph-ERS006550-100/kmers.txt \
+-read-sample-graph ERS006597 ../RayGraph-ERS006597-100/kmers.txt \
+-read-sample-graph ERS006605 ../RayGraph-ERS006605-100/kmers.txt \
+-read-sample-graph ERS006495 ../RayGraph-ERS006495-100/kmers.txt \
+-read-sample-graph ERS006497 ../RayGraph-ERS006497-100/kmers.txt \
+-read-sample-graph ERS006498 ../RayGraph-ERS006498-100/kmers.txt \
+-read-sample-graph ERS006530 ../RayGraph-ERS006530-100/kmers.txt \
+-read-sample-graph ERS006534 ../RayGraph-ERS006534-100/kmers.txt \
+-read-sample-graph ERS006537 ../RayGraph-ERS006537-100/kmers.txt \
+-read-sample-graph ERS006546 ../RayGraph-ERS006546-100/kmers.txt \
+-read-sample-graph ERS006565 ../RayGraph-ERS006565-100/kmers.txt \
+-read-sample-graph ERS006568 ../RayGraph-ERS006568-100/kmers.txt \
+-read-sample-graph ERS006573 ../RayGraph-ERS006573-100/kmers.txt \
+-read-sample-graph ERS006584 ../RayGraph-ERS006584-100/kmers.txt \
+-read-sample-graph ERS006592 ../RayGraph-ERS006592-100/kmers.txt \
+-read-sample-graph ERS006527 ../RayGraph-ERS006527-100/kmers.txt \
+-read-sample-graph ERS006532 ../RayGraph-ERS006532-100/kmers.txt \
+-read-sample-graph ERS006551 ../RayGraph-ERS006551-100/kmers.txt \
+-read-sample-graph ERS006558 ../RayGraph-ERS006558-100/kmers.txt \
+-read-sample-graph ERS006580 ../RayGraph-ERS006580-100/kmers.txt \
+-read-sample-graph ERS006596 ../RayGraph-ERS006596-100/kmers.txt \
+-read-sample-graph ERS006503 ../RayGraph-ERS006503-100/kmers.txt \
+-read-sample-graph ERS006504 ../RayGraph-ERS006504-100/kmers.txt \
+-read-sample-graph ERS006509 ../RayGraph-ERS006509-100/kmers.txt \
+-read-sample-graph ERS006548 ../RayGraph-ERS006548-100/kmers.txt \
+-read-sample-graph ERS006560 ../RayGraph-ERS006560-100/kmers.txt \
+-read-sample-graph ERS006570 ../RayGraph-ERS006570-100/kmers.txt \
+-read-sample-graph ERS006572 ../RayGraph-ERS006572-100/kmers.txt \
+-read-sample-graph ERS006574 ../RayGraph-ERS006574-100/kmers.txt \
+-read-sample-graph ERS006606 ../RayGraph-ERS006606-100/kmers.txt \
+-read-sample-graph ERS006501 ../RayGraph-ERS006501-100/kmers.txt \
+-read-sample-graph ERS006511 ../RayGraph-ERS006511-100/kmers.txt \
+-read-sample-graph ERS006535 ../RayGraph-ERS006535-100/kmers.txt \
+-read-sample-graph ERS006494 ../RayGraph-ERS006494-100/kmers.txt \
+-read-sample-graph ERS006488 ../RayGraph-ERS006488-100/kmers.txt \
+-read-sample-graph ERS006524 ../RayGraph-ERS006524-100/kmers.txt \
+-read-sample-graph ERS006587 ../RayGraph-ERS006587-100/kmers.txt \
+-read-sample-graph ERS006608 ../RayGraph-ERS006608-100/kmers.txt \
+-read-sample-graph ERS006485 ../RayGraph-ERS006485-100/kmers.txt \
+-read-sample-graph ERS006528 ../RayGraph-ERS006528-100/kmers.txt \
+-read-sample-graph ERS006539 ../RayGraph-ERS006539-100/kmers.txt \
+-read-sample-graph ERS006591 ../RayGraph-ERS006591-100/kmers.txt \
+-read-sample-graph ERS006595 ../RayGraph-ERS006595-100/kmers.txt \
+-read-sample-graph ERS006492 ../RayGraph-ERS006492-100/kmers.txt \
+-read-sample-graph ERS006533 ../RayGraph-ERS006533-100/kmers.txt \
+-read-sample-graph ERS006553 ../RayGraph-ERS006553-100/kmers.txt \
+-read-sample-graph ERS006582 ../RayGraph-ERS006582-100/kmers.txt \
+-read-sample-graph ERS006598 ../RayGraph-ERS006598-100/kmers.txt \
+-read-sample-graph ERS006515 ../RayGraph-ERS006515-100/kmers.txt \
+-read-sample-graph ERS006521 ../RayGraph-ERS006521-100/kmers.txt \
+-read-sample-graph ERS006517 ../RayGraph-ERS006517-100/kmers.txt \
+-read-sample-graph ERS006554 ../RayGraph-ERS006554-100/kmers.txt \
+-read-sample-graph ERS006559 ../RayGraph-ERS006559-100/kmers.txt \
+-read-sample-graph ERS006564 ../RayGraph-ERS006564-100/kmers.txt \
+-read-sample-graph ERS006589 ../RayGraph-ERS006589-100/kmers.txt \
+-read-sample-graph ERS006590 ../RayGraph-ERS006590-100/kmers.txt \
+-read-sample-graph ERS006594 ../RayGraph-ERS006594-100/kmers.txt \
+-read-sample-graph ERS006499 ../RayGraph-ERS006499-100/kmers.txt \
+-read-sample-graph ERS006529 ../RayGraph-ERS006529-100/kmers.txt \
+-read-sample-graph ERS006513 ../RayGraph-ERS006513-100/kmers.txt \
+-read-sample-graph ERS006563 ../RayGraph-ERS006563-100/kmers.txt \
+-read-sample-graph ERS006581 ../RayGraph-ERS006581-100/kmers.txt \
+-read-sample-graph ERS006542 ../RayGraph-ERS006542-100/kmers.txt \
+-read-sample-graph ERS006586 ../RayGraph-ERS006586-100/kmers.txt \
+
