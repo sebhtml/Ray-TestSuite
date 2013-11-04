@@ -4,13 +4,14 @@
 
 rm -rf RaySurveyorResults
 
+#-show-communication-events \
 
 processes=25
 
-#-show-communication-events \
 mpiexec -n $processes \
 -output-filename RaySurveyorResults \
 ./Ray \
+-route-messages \
 	-k 31 \
 -output RaySurveyorResults \
 -run-surveyor \
