@@ -16,10 +16,16 @@ mpiexec -n $processes \
 -k 31 \
 -output RaySurveyorResults \
 -run-surveyor \
--read-sample-graph ID033401 ./Assembly_2013-10-07/1996/ID033401-Ray-2013-10-07/kmers.txt \
+-read-sample-graph ID033401 Cached/Assembly_2013-10-07/1996/ID033401-Ray-2013-10-07/kmers.txt \
+
+exit
+
 -read-sample-graph ID033406 ./Assembly_2013-10-07/1996/ID033406-Ray-2013-10-07/kmers.txt \
 -read-sample-graph ID033399 ./Assembly_2013-10-07/1996/ID033399-Ray-2013-10-07/kmers.txt \
 -read-sample-graph ID033398 ./Assembly_2013-10-07/1996/ID033398-Ray-2013-10-07/kmers.txt \
+
+exit
+
 -read-sample-graph KID119442 ./Assembly_2013-10-07/Patients/KID119442-Ray-2013-10-07/kmers.txt \
 -read-sample-graph KID119444 ./Assembly_2013-10-07/Patients/KID119444-Ray-2013-10-07/kmers.txt \
 -read-sample-graph KID119445 ./Assembly_2013-10-07/Patients/KID119445-Ray-2013-10-07/kmers.txt \

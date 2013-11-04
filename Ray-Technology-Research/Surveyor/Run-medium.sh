@@ -22,6 +22,9 @@ mpiexec -n $processes \
 -read-sample-graph ID033398 ./Assembly_2013-10-07/1996/ID033398-Ray-2013-10-07/kmers.txt \
 -read-sample-graph KID119442 ./Assembly_2013-10-07/Patients/KID119442-Ray-2013-10-07/kmers.txt \
 -read-sample-graph KID119444 ./Assembly_2013-10-07/Patients/KID119444-Ray-2013-10-07/kmers.txt \
+
+exit
+
 -read-sample-graph KID119445 ./Assembly_2013-10-07/Patients/KID119445-Ray-2013-10-07/kmers.txt \
 -read-sample-graph KID119536 ./Assembly_2013-10-07/Patients/KID119536-Ray-2013-10-07/kmers.txt \
 -read-sample-graph KID119537 ./Assembly_2013-10-07/Patients/KID119537-Ray-2013-10-07/kmers.txt \
