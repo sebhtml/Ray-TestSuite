@@ -1,8 +1,21 @@
 Test suite for the Ray assembler.
 
-data-for-unit-tests is included.
+The 3 test suites are:
 
-data-for-system-tests is too large to be included.
+- unit tests
 
+- system tests
+
+- robustness tests
+
+
+Required data:
+
+- data-for-unit-tests is included.
+
+- data-for-system-tests is too large to be included.
+
+
+Also:
 
 Ray-Technology-Research contains various tests
