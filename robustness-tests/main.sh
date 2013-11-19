@@ -1,12 +1,14 @@
 #!/bin/bash
 
-for test in $(cat tests.txt)
+for test in $(cat tests.txt|grep -v '#')
 do
-	./test.sh &2>1 | tee $test.log
-done | tee All.log
+	echo "Running test $test $(./test.sh) "
+done | tee results
 
-echo "PASS:"
-grep PASS All.log | wc -l
+pass=$(grep PASS results|wc -l)
+fail=$(grep FAIL results|wc -l)
+all=$(($pass + $fail))
 
-echo "FAIL:"
-grep FAIL All.log | wc -l
+echo "== Robustness tests =="
+echo "PASS: $pass / $all"
+echo "FAIL: $fail / $all"

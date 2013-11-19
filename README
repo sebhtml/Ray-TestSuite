@@ -2,11 +2,11 @@ Test suite for the Ray assembler.
 
 The 3 test suites are:
 
-- unit tests
+- unit-tests (entry point: main.sh)
 
-- system tests
+- system-tests (entry point: ../system-tests/main-on-super-computer.sh)
 
-- robustness tests
+- robustness-tests (entry point: main.sh)
 
 
 Required data:
