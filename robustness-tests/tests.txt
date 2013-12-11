@@ -1,7 +1,8 @@
-test.sh
-test-routing.sh
-test-2-cores.sh
+command-denovo-mini-ranks.sh
 command-denovo.sh
 fast.sh
-#test-mini-ranks.sh
-#test-mini-ranks-network-test.sh
+test-2-cores.sh
+test-mini-ranks-network-test.sh
+test-mini-ranks.sh
+test-routing.sh
+test.sh
