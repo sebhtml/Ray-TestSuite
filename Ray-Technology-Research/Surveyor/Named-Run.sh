@@ -4,7 +4,8 @@ output=$1
 
 rm -rf $output
 #-show-communication-events \
-processes=25
+
+processes=24
 rm $output.*
 
 mpiexec -n $processes \

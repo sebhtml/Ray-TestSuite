@@ -6,7 +6,7 @@ rm -rf RaySurveyorResults
 
 #-show-communication-events \
 
-processes=25
+processes=24
 
 rm RaySurveyorResults.*
 
