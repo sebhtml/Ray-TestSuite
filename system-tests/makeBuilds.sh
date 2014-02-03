@@ -13,7 +13,7 @@ for k in 32 64 96 128
 do
 	echo "$(date) Building k=$k"
 	make clean
-	make MAXKMERLENGTH=$k  PREFIX=$RAY_TEST_SUITE/system-tests/builds/build-$k ASSERT=y  DEBUG=y
+	make MAXKMERLENGTH=$k  PREFIX=$RAY_TEST_SUITE/system-tests/builds/build-$k ASSERT=y  DEBUG=y  HAVE_LIBZ=y
 	make install
 done
 
@@ -24,7 +24,7 @@ make install
 
 echo "$(date) Building vanilla Ray"
 make clean
-make MAXKMERLENGTH=32 ASSERT=y DEBUG=y PREFIX=$RAY_TEST_SUITE/system-tests/builds/build-vanilla
+make MAXKMERLENGTH=32 ASSERT=y DEBUG=y PREFIX=$RAY_TEST_SUITE/system-tests/builds/build-vanilla HAVE_LIBZ=y
 make install
 
 make clean
