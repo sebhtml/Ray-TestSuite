@@ -16,12 +16,12 @@ commit=$(git log|grep ^commit | head -n1 | awk '{print $2}')
 version=$commit
 release=1
 
-prefix=/mnt/lustre03/corbeil/corbeil_group/nne-790-ab/software/nne-790-ab/ray/$version-$release
+prefix=/mnt/scratch_mp2/corbeil/corbeil_group/nne-790-ab/software/nne-790-ab/ray/$version-$release
 
 while test -d $prefix
 do
 	release=$(($release + 1))
-	prefix=/mnt/lustre03/corbeil/corbeil_group/nne-790-ab/software/nne-790-ab/ray/$version-$release
+	prefix=/mnt/scratch_mp2/corbeil/corbeil_group/nne-790-ab/software/nne-790-ab/ray/$version-$release
 done
 
 echo "Will produce release $release"
@@ -29,7 +29,7 @@ echo "Will produce release $release"
 mkdir -p $prefix/bin
 cp Ray $prefix/bin
 
-module=/mnt/lustre03/corbeil/corbeil_group/nne-790-ab/modulefiles/nne-790-ab/ray/$version-$release
+module=/mnt/scratch_mp2/corbeil/corbeil_group/nne-790-ab/modulefiles/nne-790-ab/ray/$version-$release
 
 cp ~/git-clones/Ray-TestSuite/Build-Scripts/mp2/Template \
 $module
@@ -42,5 +42,5 @@ sed -i "$expression" $module
 
 echo "To use the new module:"
 echo ""
-echo "module use /mnt/lustre03/corbeil/corbeil_group/nne-790-ab/modulefiles/"
+echo "module use /mnt/scratch_mp2/corbeil/corbeil_group/nne-790-ab/modulefiles/"
 echo "module load nne-790-ab/ray/$version-$release"
